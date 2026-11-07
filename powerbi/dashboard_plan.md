@@ -1,6 +1,6 @@
 # Power BI implementation package
 
-**Status:** fact/dimension CSVs, Power Query, DAX, theme and dashboard specification are prepared. This package is not an interactive `.pbix`. `reports/dashboard_preview.png` is a static preview built from validated results, not a Power BI screenshot. Desktop import, DAX execution and visual interactions require the checks below before claiming a finished Power BI dashboard.
+**Status:** implemented as the native three-page project in `desktop/A311.pbip` and validated in Power BI Desktop on November 7, 2026. See `docs/desktop_validation.md`. `reports/dashboard-1.png` through `dashboard-3.png` are exports of the actual Desktop report. `reports/dashboard_preview.png` is the earlier Python-generated design preview.
 
 ## Import and relationships
 
@@ -71,4 +71,4 @@ Use the generated `reports/powerbi_acceptance.csv` as the expected-value checkli
 7. Open the four ambiguous timestamp records through the quality table. They stay in request/closed counts and have blank duration, not zero.
 8. Save/reopen the `.pbix`, refresh from the project folder, repeat the total/service/month checks, and capture a real Desktop screenshot. Record Power BI version and pass/fail results in `docs/desktop_validation.md`.
 
-The supplied DAX and M have not been executed in Power BI Desktop. Static preview totals and SQLite/Python agreement do not substitute for these application checks.
+The DAX and M have now been executed in Desktop. The validation record distinguishes actual UI interaction checks from read-only DAX query comparisons. A dedicated quality-record drill-through remains outside the first-release scope; exceptions remain available in the local analysis outputs.

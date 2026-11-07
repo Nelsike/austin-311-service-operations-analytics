@@ -12,3 +12,6 @@ reports/tables/04_open_backlog.csv
 reports/tables/quality_issues.csv
 .env
 .env.*
+**/.pbi/
+*.abf
+*.pbit

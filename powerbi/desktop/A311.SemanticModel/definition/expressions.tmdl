@@ -1,0 +1,5 @@
+expression pProjectFolder = "C:\Austin311" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 970d0ae8-dfd2-5e95-981a-526fed7d9a0e
+
+	annotation PBI_ResultType = Text
+

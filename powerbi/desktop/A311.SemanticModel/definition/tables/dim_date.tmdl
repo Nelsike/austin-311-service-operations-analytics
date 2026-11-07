@@ -1,0 +1,76 @@
+table dim_date
+	lineageTag: 04d2591c-1ecb-5837-a2e2-840b2e9f550b
+	dataCategory: Time
+
+	column date_key
+		dataType: int64
+		isHidden
+		lineageTag: e3da2e68-ef5e-55d3-92cb-7ab03657322b
+		summarizeBy: none
+		sourceColumn: date_key
+
+	column date
+		dataType: dateTime
+		isKey
+		formatString: M/d/yyyy
+		lineageTag: f73ea3ee-0152-5bc4-b594-4d37ca295373
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column year
+		dataType: int64
+		lineageTag: 191f65ab-df51-5991-8f2d-2ef859a353a6
+		summarizeBy: none
+		sourceColumn: year
+
+	column quarter
+		dataType: int64
+		lineageTag: b0f55c5c-6cc7-5d0d-9095-d4f0bb4e47e4
+		summarizeBy: none
+		sourceColumn: quarter
+
+	column month
+		dataType: int64
+		lineageTag: ad6b68ef-93f1-5e9c-a594-d9677b85d4d7
+		summarizeBy: none
+		sourceColumn: month
+
+	column month_name
+		dataType: string
+		lineageTag: 7ad5ffa7-69b5-54ad-958f-2c2b4b003342
+		summarizeBy: none
+		sourceColumn: month_name
+		sortByColumn: month
+
+	column year_month
+		dataType: string
+		lineageTag: 8242c1a5-c2f3-53aa-8e29-5a90979fdd2c
+		summarizeBy: none
+		sourceColumn: year_month
+		sortByColumn: month_sort
+
+	column month_sort
+		dataType: int64
+		lineageTag: cb931644-9200-54ef-a0f4-28fb90e23470
+		summarizeBy: none
+		sourceColumn: month_sort
+
+	column weekday
+		dataType: string
+		lineageTag: d55754b8-708c-5176-bf1d-a37f912351c0
+		summarizeBy: none
+		sourceColumn: weekday
+
+	partition dim_date = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(pProjectFolder & "\data\powerbi\dim_date.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Nulls = Table.ReplaceValue(Headers, "", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),
+					Typed = Table.TransformColumnTypes(Nulls, {{"date_key", Int64.Type}, {"date", type date}, {"year", Int64.Type}, {"quarter", Int64.Type}, {"month", Int64.Type}, {"month_name", type text}, {"year_month", type text}, {"month_sort", Int64.Type}, {"weekday", type text}}, "en-US")
+				in
+					Typed
+

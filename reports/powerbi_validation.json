@@ -1,0 +1,12 @@
+{
+  "desktop_version": "2.159.1231.0 (October 2026)",
+  "queries_executed": 7,
+  "headline_metrics_match": true,
+  "all_43_service_percentiles_match": true,
+  "service_and_month_filter_contexts_match": true,
+  "empty_backlog_handled": true,
+  "creation_and_closure_date_roles_match": true,
+  "relationship_orphans": 0,
+  "method": "Read-only DAX queries against the actual running Power BI Desktop model; compared to saved Python and SQL results.",
+  "visual_interaction_review": "Recorded separately in desktop_validation.md"
+}

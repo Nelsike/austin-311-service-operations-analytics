@@ -1,0 +1,413 @@
+table fact_requests
+	lineageTag: f631f63e-235a-5d0a-9794-4b9436c73e64
+
+	measure 'Primary Requests' = COALESCE(CALCULATE(COUNTROWS(fact_requests), KEEPFILTERS(fact_requests[in_primary] = 1)), 0)
+		formatString: #,0
+		displayFolder: Portfolio metrics
+		lineageTag: 56a8dd7a-da3a-57d7-8f60-fc582a26ae81
+
+	measure 'Reported Closed Requests' = CALCULATE([Primary Requests], KEEPFILTERS(fact_requests[is_closed] = 1))
+		formatString: #,0
+		displayFolder: Portfolio metrics
+		lineageTag: 9320a48f-25fa-56ba-a4ac-b55b7b6c27d7
+
+	measure 'Reported Open Backlog' = CALCULATE([Primary Requests], KEEPFILTERS(fact_requests[is_open] = 1))
+		formatString: #,0
+		displayFolder: Portfolio metrics
+		lineageTag: cd02eca5-b509-596a-a189-35694069c904
+
+	measure 'Snapshot Closure Share' = DIVIDE([Reported Closed Requests], [Primary Requests])
+		formatString: 0.00%
+		displayFolder: Portfolio metrics
+		lineageTag: 162272f3-fd65-54e3-a02e-c6e4e2041740
+
+	measure 'Duration Eligible Closed' = CALCULATE([Primary Requests], KEEPFILTERS(fact_requests[valid_closure] = 1))
+		formatString: #,0
+		displayFolder: Portfolio metrics
+		lineageTag: ff24235c-fd01-5e1e-bfad-ff938d2574ca
+
+	measure 'Median Closure Days' =
+			MEDIANX(
+			    FILTER(fact_requests, fact_requests[in_primary] = 1 && fact_requests[valid_closure] = 1),
+			    fact_requests[closure_days]
+			)
+		formatString: 0.00
+		displayFolder: Portfolio metrics
+		lineageTag: b9947642-2de2-5fe4-8974-5134306300b7
+
+	measure 'Median Closure Hours' = [Median Closure Days] * 24
+		formatString: 0.00
+		displayFolder: Portfolio metrics
+		lineageTag: 747c83f9-bf2b-57f4-ace1-f82c64300849
+
+	measure 'P90 Closure Days' =
+			PERCENTILEX.INC(
+			    FILTER(fact_requests, fact_requests[in_primary] = 1 && fact_requests[valid_closure] = 1),
+			    fact_requests[closure_days], 0.90
+			)
+		formatString: 0.00
+		displayFolder: Portfolio metrics
+		lineageTag: 8312a50a-73f2-5da9-933c-20c44e68b596
+
+	measure 'Deadline Eligible Closed' = CALCULATE([Primary Requests], KEEPFILTERS(fact_requests[valid_deadline_closure] = 1))
+		formatString: #,0
+		displayFolder: Portfolio metrics
+		lineageTag: 8349fa76-15b3-5072-9549-0a69118a9d01
+
+	measure 'Closed By Recorded Deadline' =
+			CALCULATE([Primary Requests], KEEPFILTERS(fact_requests[valid_deadline_closure] = 1),
+			    KEEPFILTERS(fact_requests[closed_by_deadline] = 1))
+		formatString: #,0
+		displayFolder: Portfolio metrics
+		lineageTag: b54b8a13-e967-5a48-8f72-f8eb87991391
+
+	measure 'Closed By Recorded Deadline Share' = DIVIDE([Closed By Recorded Deadline], [Deadline Eligible Closed])
+		formatString: 0.00%
+		displayFolder: Portfolio metrics
+		lineageTag: c9b9ec5f-c5b9-5266-9d34-2f863c89b221
+
+	measure 'Reported Open Past Deadline' = CALCULATE([Reported Open Backlog], KEEPFILTERS(fact_requests[open_past_deadline] = 1))
+		formatString: #,0
+		displayFolder: Portfolio metrics
+		lineageTag: 35a8bb04-147e-5c13-8686-e7297ce8e031
+
+	measure 'Median Open Age Days' =
+			MEDIANX(
+			    FILTER(fact_requests, fact_requests[in_primary] = 1 && fact_requests[is_open] = 1 && NOT ISBLANK(fact_requests[open_age_days])),
+			    fact_requests[open_age_days]
+			)
+		formatString: 0.00
+		displayFolder: Portfolio metrics
+		lineageTag: e53ae5e0-54a0-5c43-a53b-aa28f8c8950e
+
+	measure 'Flag Conflicts In Primary' = CALCULATE([Primary Requests], KEEPFILTERS(fact_requests[status_flag_conflict] = 1))
+		formatString: #,0
+		displayFolder: Portfolio metrics
+		lineageTag: 78e0e7c7-ffb8-5559-af6b-1275a107af3b
+
+	measure 'All Nontest Intake' = COALESCE(CALCULATE(COUNTROWS(fact_requests), KEEPFILTERS(fact_requests[is_test] = 0)), 0)
+		formatString: #,0
+		displayFolder: Portfolio metrics
+		lineageTag: c247617e-4828-5af7-aa15-d0058ea1152a
+
+	measure 'Duplicate Marked Intake' = CALCULATE([All Nontest Intake], KEEPFILTERS(fact_requests[is_business_duplicate] = 1))
+		formatString: #,0
+		displayFolder: Portfolio metrics
+		lineageTag: fab95ff8-51bb-59a9-a3f1-06adbf40c686
+
+	measure 'Duplicate Marked Share' = DIVIDE([Duplicate Marked Intake], [All Nontest Intake])
+		formatString: 0.00%
+		displayFolder: Portfolio metrics
+		lineageTag: 7926f360-6b92-5b40-8c86-e33a1d9005f0
+
+	measure 'Cohort Closures By Closure Month' =
+			CALCULATE([Reported Closed Requests],
+			    USERELATIONSHIP(dim_date[date_key], fact_requests[closed_date_key]))
+		formatString: #,0
+		displayFolder: Portfolio metrics
+		lineageTag: f1d5e5ae-0670-5702-992e-da79acff718c
+
+	measure 'Snapshot Date' = MAX(snapshot[snapshot_date])
+		displayFolder: Portfolio metrics
+		lineageTag: d6136da4-68c0-5847-8101-2fd6fdaa485a
+
+	measure 'Scope Label' = "Requests created in 2025 | statuses observed in Nov 7, 2026 export"
+		displayFolder: Portfolio metrics
+		lineageTag: 8669aac0-4d2c-550f-ae03-bdd64f5f0faa
+
+	measure 'Mean Closure Days' = AVERAGEX(FILTER(fact_requests, fact_requests[in_primary] = 1 && fact_requests[valid_closure] = 1), fact_requests[closure_days])
+		formatString: 0.00
+		displayFolder: Portfolio metrics
+		lineageTag: d3c4c26b-f5c4-56f4-bf21-b5721e8a9b57
+
+	measure 'Oldest Reported Open Age Days' = MAXX(FILTER(fact_requests, fact_requests[in_primary] = 1 && fact_requests[is_open] = 1), fact_requests[open_age_days])
+		formatString: 0.00
+		displayFolder: Portfolio metrics
+		lineageTag: 668a6eb9-13e2-536b-8a5f-72f8cf9fcd6c
+
+	measure 'Ambiguous Timestamps' = CALCULATE([Primary Requests], KEEPFILTERS(fact_requests[timestamp_ambiguity] = 1))
+		formatString: #,0
+		displayFolder: Portfolio metrics
+		lineageTag: 6a202c0c-d2cd-5d55-a035-7e8eddc2ba9d
+
+	measure 'Missing Geography All Intake' = COALESCE(COUNTROWS(FILTER(fact_requests, ISBLANK(fact_requests[latitude]))), 0)
+		formatString: #,0
+		displayFolder: Portfolio metrics
+		lineageTag: 4800c3ca-32fb-5d99-a5b3-16ecb12e65e1
+
+	measure 'Top Eight Intake' = VAR Position = RANKX(ALLSELECTED(dim_service[service_description]), [Primary Requests], , DESC, DENSE) RETURN IF(Position <= 8 && [Primary Requests] > 0, [Primary Requests], BLANK())
+		formatString: #,0
+		displayFolder: Portfolio metrics
+		lineageTag: 88a8d03f-28f6-5e9a-a748-33c656a5566c
+
+	measure 'Open Age By Request' = IF([Reported Open Backlog] > 0, MAX(fact_requests[open_age_days]), BLANK())
+		formatString: #,0
+		displayFolder: Portfolio metrics
+		lineageTag: 72446211-752c-5be3-b2fd-bc01b5c15e4d
+
+	column request_number
+		dataType: string
+		lineageTag: 72cedd46-4ce6-50b6-8ae8-395a206719b7
+		summarizeBy: none
+		sourceColumn: request_number
+
+	column source_status
+		dataType: string
+		lineageTag: 02880c73-2f4b-578e-a64f-2a2fe6079c90
+		summarizeBy: none
+		sourceColumn: source_status
+
+	column status_class
+		dataType: string
+		lineageTag: 958c0baf-1735-5952-89e7-808151d95bf8
+		summarizeBy: none
+		sourceColumn: status_class
+
+	column is_business_duplicate
+		dataType: int64
+		isHidden
+		lineageTag: c610d2a9-5d29-54fa-a9a1-92056e227d90
+		summarizeBy: none
+		sourceColumn: is_business_duplicate
+
+	column is_test
+		dataType: int64
+		isHidden
+		lineageTag: ab5f15cd-26ff-5df1-8f1d-600638a1b529
+		summarizeBy: none
+		sourceColumn: is_test
+
+	column in_primary
+		dataType: int64
+		isHidden
+		lineageTag: a4234eb0-6f35-5bf8-a922-c834a7ad3d43
+		summarizeBy: none
+		sourceColumn: in_primary
+
+	column is_closed
+		dataType: int64
+		lineageTag: 427d14d4-2f2a-56e7-8947-52d8612d14d7
+		summarizeBy: none
+		sourceColumn: is_closed
+
+	column is_open
+		dataType: int64
+		lineageTag: 76e890e8-490d-59af-95dd-3c8de349ff1e
+		summarizeBy: none
+		sourceColumn: is_open
+
+	column created_date_key
+		dataType: int64
+		isHidden
+		lineageTag: 16e10c25-5f9e-55c6-8c71-5d56dbd1dcf1
+		summarizeBy: none
+		sourceColumn: created_date_key
+
+	column closed_date_key
+		dataType: int64
+		isHidden
+		lineageTag: 6f4a5fb6-d335-5808-a0b3-a84df8db0896
+		summarizeBy: none
+		sourceColumn: closed_date_key
+
+	column deadline_date_key
+		dataType: int64
+		isHidden
+		lineageTag: d06b0270-d5a1-55b3-851c-8768eda371c6
+		summarizeBy: none
+		sourceColumn: deadline_date_key
+
+	column created_local
+		dataType: dateTime
+		formatString: M/d/yyyy
+		lineageTag: 02daffee-4f30-53c6-a7a3-459587a86f83
+		summarizeBy: none
+		sourceColumn: created_local
+
+	column created_utc
+		dataType: string
+		lineageTag: 5aaccdc7-4cf1-52ea-b937-987f57d34258
+		summarizeBy: none
+		sourceColumn: created_utc
+
+	column closed_local
+		dataType: dateTime
+		formatString: M/d/yyyy
+		lineageTag: 094b177f-f334-5f3c-9866-d4ae02a7a868
+		summarizeBy: none
+		sourceColumn: closed_local
+
+	column closed_utc
+		dataType: string
+		lineageTag: 40312057-522d-5414-86a9-9e397b0882b0
+		summarizeBy: none
+		sourceColumn: closed_utc
+
+	column deadline_local
+		dataType: dateTime
+		formatString: M/d/yyyy
+		lineageTag: 56e34a2e-4f21-54be-a05a-1ab1e82f7ffb
+		summarizeBy: none
+		sourceColumn: deadline_local
+
+	column deadline_utc
+		dataType: string
+		lineageTag: f4e01752-413b-517f-9aff-b426ab4e4a8b
+		summarizeBy: none
+		sourceColumn: deadline_utc
+
+	column last_updated_local
+		dataType: dateTime
+		formatString: M/d/yyyy
+		lineageTag: 3d46b25d-417c-55ba-be58-ec32c25a3f5a
+		summarizeBy: none
+		sourceColumn: last_updated_local
+
+	column valid_closure
+		dataType: int64
+		isHidden
+		lineageTag: c496bca7-fe23-5248-bb1d-9eb720cfeefe
+		summarizeBy: none
+		sourceColumn: valid_closure
+
+	column closure_days
+		dataType: double
+		formatString: 0.00
+		lineageTag: c3fddfee-e1c0-5fd6-8ea0-0fc645403caa
+		summarizeBy: none
+		sourceColumn: closure_days
+
+	column valid_deadline_closure
+		dataType: int64
+		isHidden
+		lineageTag: c29f32b4-e94b-5b5d-814c-7e4bae41fdaa
+		summarizeBy: none
+		sourceColumn: valid_deadline_closure
+
+	column closed_by_deadline
+		dataType: int64
+		lineageTag: 2ff9422f-7021-5791-8bd5-8f2b4aac81c7
+		summarizeBy: none
+		sourceColumn: closed_by_deadline
+
+	column open_age_days
+		dataType: double
+		formatString: 0.00
+		lineageTag: d915120b-66bb-55c4-b446-03db68d3d9ff
+		summarizeBy: none
+		sourceColumn: open_age_days
+
+	column open_past_deadline
+		dataType: int64
+		lineageTag: af4c72e5-942e-54e4-8cbb-55b8d6758d69
+		summarizeBy: none
+		sourceColumn: open_past_deadline
+
+	column source_is_open
+		dataType: int64
+		lineageTag: 48006939-7b74-55e4-85a7-24a6b080631d
+		summarizeBy: none
+		sourceColumn: source_is_open
+
+	column source_is_closed
+		dataType: int64
+		lineageTag: 0b14afdd-d53f-51de-b8d9-be4e4f3df72f
+		summarizeBy: none
+		sourceColumn: source_is_closed
+
+	column source_is_overdue
+		dataType: int64
+		lineageTag: d3d647d3-1283-5e51-bf12-39066f089123
+		summarizeBy: none
+		sourceColumn: source_is_overdue
+
+	column source_closed_on_time
+		dataType: int64
+		lineageTag: d0cf06fc-d49d-52ac-9d1b-cf2be4d75ca1
+		summarizeBy: none
+		sourceColumn: source_closed_on_time
+
+	column source_response_days
+		dataType: double
+		formatString: 0.00
+		lineageTag: ddb80a1b-0f6e-5bf9-aa8b-8d2e8848242c
+		summarizeBy: none
+		sourceColumn: source_response_days
+
+	column source_age_days
+		dataType: double
+		formatString: 0.00
+		lineageTag: 84359f75-1caf-5563-bafa-6f0f0f74c5cf
+		summarizeBy: none
+		sourceColumn: source_age_days
+
+	column source_fiscal_year
+		dataType: int64
+		lineageTag: 228bea70-46b6-5017-ad53-534d8f0a7013
+		summarizeBy: none
+		sourceColumn: source_fiscal_year
+
+	column status_flag_conflict
+		dataType: int64
+		lineageTag: 405a597b-3235-57e9-a9eb-b4cb972201b1
+		summarizeBy: none
+		sourceColumn: status_flag_conflict
+
+	column deadline_flag_conflict
+		dataType: int64
+		lineageTag: 5bba03d7-0d76-5b86-a78e-77a06eaeb420
+		summarizeBy: none
+		sourceColumn: deadline_flag_conflict
+
+	column timestamp_ambiguity
+		dataType: int64
+		lineageTag: 3984c15e-69cc-5533-b39e-6bb03c268838
+		summarizeBy: none
+		sourceColumn: timestamp_ambiguity
+
+	column longitude
+		dataType: double
+		formatString: 0.00
+		lineageTag: d2373f04-f7f3-58af-9789-75fa24aaa74f
+		summarizeBy: none
+		sourceColumn: longitude
+
+	column latitude
+		dataType: double
+		formatString: 0.00
+		lineageTag: 17b30325-1537-5bdf-9845-5a9307c0e263
+		summarizeBy: none
+		sourceColumn: latitude
+
+	column service_key
+		dataType: int64
+		isHidden
+		lineageTag: 47a89630-5bb1-5c69-93ee-0e9e763d9531
+		summarizeBy: none
+		sourceColumn: service_key
+
+	column organization_key
+		dataType: int64
+		isHidden
+		lineageTag: 34838a6d-2667-5678-9c0a-d4f27714ea5d
+		summarizeBy: none
+		sourceColumn: organization_key
+
+	column channel_key
+		dataType: int64
+		isHidden
+		lineageTag: ec561f3c-f844-5e8d-ba5b-c51ea2c6535f
+		summarizeBy: none
+		sourceColumn: channel_key
+
+	partition fact_requests = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(pProjectFolder & "\data\powerbi\fact_requests.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Nulls = Table.ReplaceValue(Headers, "", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),
+					Typed = Table.TransformColumnTypes(Nulls, {{"request_number", type text}, {"source_status", type text}, {"status_class", type text}, {"is_business_duplicate", Int64.Type}, {"is_test", Int64.Type}, {"in_primary", Int64.Type}, {"is_closed", Int64.Type}, {"is_open", Int64.Type}, {"created_date_key", Int64.Type}, {"closed_date_key", Int64.Type}, {"deadline_date_key", Int64.Type}, {"created_local", type datetime}, {"created_utc", type text}, {"closed_local", type datetime}, {"closed_utc", type text}, {"deadline_local", type datetime}, {"deadline_utc", type text}, {"last_updated_local", type datetime}, {"valid_closure", Int64.Type}, {"closure_days", type number}, {"valid_deadline_closure", Int64.Type}, {"closed_by_deadline", Int64.Type}, {"open_age_days", type number}, {"open_past_deadline", Int64.Type}, {"source_is_open", Int64.Type}, {"source_is_closed", Int64.Type}, {"source_is_overdue", Int64.Type}, {"source_closed_on_time", Int64.Type}, {"source_response_days", type number}, {"source_age_days", type number}, {"source_fiscal_year", Int64.Type}, {"status_flag_conflict", Int64.Type}, {"deadline_flag_conflict", Int64.Type}, {"timestamp_ambiguity", Int64.Type}, {"longitude", type number}, {"latitude", type number}, {"service_key", Int64.Type}, {"organization_key", Int64.Type}, {"channel_key", Int64.Type}}, "en-US")
+				in
+					Typed
+

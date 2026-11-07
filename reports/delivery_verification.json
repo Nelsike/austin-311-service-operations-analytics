@@ -23,6 +23,8 @@
     "snapshot"
   ],
   "preview_visually_reviewed": true,
-  "powerbi_desktop_validated": false,
-  "synthetic_tests": "8 passed; see test_results.txt"
+  "powerbi_desktop_validated": true,
+  "synthetic_tests": "8 passed; see test_results.txt",
+  "native_report_export_reviewed": true,
+  "desktop_validation_evidence": "powerbi_validation.json and ../docs/desktop_validation.md"
 }

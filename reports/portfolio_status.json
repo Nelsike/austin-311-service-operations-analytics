@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "source_sha256": "d44249d91cca0da43444339678a8cc32b40191de3e9ae325bad692bc29c3c70a",
+  "power_bi_desktop_validated": true,
+  "desktop_version": "2.159.1231.0 (October 2026)",
+  "validation_date": "2026-11-07",
+  "native_report_pages": 3,
+  "public_release": false,
+  "linkedin_attached": false,
+  "note": "Desktop model, filters, save/reopen and native PDF export verified. Static exports show the table viewport; the interactive report supports scrolling through all rows."
+}

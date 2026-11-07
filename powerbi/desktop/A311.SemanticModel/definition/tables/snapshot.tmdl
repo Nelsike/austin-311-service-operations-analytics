@@ -1,0 +1,53 @@
+table snapshot
+	lineageTag: 659dcce1-2b14-58f8-a599-a894851fb8f6
+
+	column snapshot_date
+		dataType: dateTime
+		formatString: M/d/yyyy
+		lineageTag: d0ceae35-01bf-5029-b0ba-e03c9f30c4e6
+		summarizeBy: none
+		sourceColumn: snapshot_date
+
+	column age_cutoff_local
+		dataType: string
+		lineageTag: 9dcc2d50-2581-5799-9a6c-2cb79228cb12
+		summarizeBy: none
+		sourceColumn: age_cutoff_local
+
+	column age_cutoff_utc
+		dataType: string
+		lineageTag: d3afe06d-da4f-5bed-9420-a4c175b11cc2
+		summarizeBy: none
+		sourceColumn: age_cutoff_utc
+
+	column cohort_start
+		dataType: dateTime
+		formatString: M/d/yyyy
+		lineageTag: d0ad99a9-ddbb-5432-a598-e1edefbbfeac
+		summarizeBy: none
+		sourceColumn: cohort_start
+
+	column cohort_end_exclusive
+		dataType: dateTime
+		formatString: M/d/yyyy
+		lineageTag: 30c8ebb0-6096-5921-a74a-54a60b462935
+		summarizeBy: none
+		sourceColumn: cohort_end_exclusive
+
+	column source_file_sha256
+		dataType: string
+		lineageTag: f3b65199-c5a7-5643-8bb7-4fe6a5e4afd1
+		summarizeBy: none
+		sourceColumn: source_file_sha256
+
+	partition snapshot = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(pProjectFolder & "\data\powerbi\snapshot.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Nulls = Table.ReplaceValue(Headers, "", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),
+					Typed = Table.TransformColumnTypes(Nulls, {{"snapshot_date", type datetime}, {"age_cutoff_local", type text}, {"age_cutoff_utc", type text}, {"cohort_start", type datetime}, {"cohort_end_exclusive", type datetime}, {"source_file_sha256", type text}}, "en-US")
+				in
+					Typed
+

@@ -1,6 +1,6 @@
 # Presenting the project confidently
 
-Use the short explanation first, then open the evidence file relevant to the follow-up. Only claim work and tool use you can demonstrate. In particular, the current delivery prepares the Power BI model and dashboard specification; it does not yet demonstrate a validated interactive Power BI report.
+Use the short explanation first, then open the evidence file relevant to the follow-up. Only claim work and tool use you can demonstrate. The current delivery includes a validated three-page Power BI Desktop report, its native project definitions and actual report exports.
 
 ## A 60-second walkthrough
 
@@ -10,7 +10,7 @@ Use the short explanation first, then open the evidence file relevant to the fol
 
 “The median closure time was about 4.66 hours, but the P90 was about 9.03 days. I recommended service-specific investigation rather than treating every request as comparable. I also found 18 primary requests still marked open, most clustered in early May 2025, and recommended verifying those old records in the live system. My key limitation is that a closed request does not independently verify the physical issue was resolved.”
 
-The quoted explanation describes v1; use the generated results when the data changes. Add that the Power BI import package is ready and show a finished Desktop report only after completing its validation checklist.
+The quoted explanation describes v1; use the generated results when the data changes. Demonstrate the finished Desktop report and its service/month interactions, then show the validation record that reconciles Power BI to Python and SQL.
 
 ## Decisions an interviewer may challenge
 
@@ -29,7 +29,7 @@ The quoted explanation describes v1; use the generated results when the data cha
 | Did you find a bottleneck? | I found service categories with long administrative closure intervals. The file does not establish whether staffing, batching, inspection or another mechanism caused them. | Findings recommendation 2 |
 | Is recorded-deadline share an SLA metric? | I label it as recorded-deadline performance because deadline history, formal service policy and actual resolution evidence are absent. | Deadline calculation and dictionary |
 | How did you validate the work? | ID/schema checks, explicit flags, date and database integrity checks, independent SQL/Python percentile agreement, reconciled totals and meaningful synthetic edge cases. | Run manifest and tests |
-| What have you done in Power BI? | Prepared typed fact/dimension exports, DAX, Power Query, relationships and a dashboard specification. Desktop execution and interaction checks are a documented remaining milestone. | dashboard_plan.md and desktop_validation.md |
+| What have you done in Power BI? | Built a native three-page report using typed fact/dimension tables, Power Query, DAX and explicit date relationships. Verified the actual model results against Python/SQL, tested filters and empty states, and saved/reopened the report. | Native report and desktop_validation.md |
 | What business impact did it have? | It is a portfolio analysis with proposed follow-ups. I did not implement an intervention or measure savings or improved service. | Findings report |
 
 ## Explain one SQL query without memorizing it

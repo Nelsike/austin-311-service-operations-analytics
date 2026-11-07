@@ -1,0 +1,27 @@
+table dim_channel
+	lineageTag: 34feb5c0-bd12-5f76-b5de-ac417cb7d70b
+
+	column channel_key
+		dataType: int64
+		isHidden
+		lineageTag: 0fc921e6-f0d4-55cf-9aa2-9c0f95173b15
+		summarizeBy: none
+		sourceColumn: channel_key
+
+	column method_received
+		dataType: string
+		lineageTag: a8187920-77f1-5cf8-a55d-5ac89318c052
+		summarizeBy: none
+		sourceColumn: method_received
+
+	partition dim_channel = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(pProjectFolder & "\data\powerbi\dim_channel.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Nulls = Table.ReplaceValue(Headers, "", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),
+					Typed = Table.TransformColumnTypes(Nulls, {{"channel_key", Int64.Type}, {"method_received", type text}}, "en-US")
+				in
+					Typed
+

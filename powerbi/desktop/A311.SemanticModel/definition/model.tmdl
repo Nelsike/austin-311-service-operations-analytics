@@ -1,0 +1,24 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["fact_requests","dim_service","dim_organization","dim_channel","dim_date","snapshot","pProjectFolder"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table fact_requests
+ref table dim_service
+ref table dim_organization
+ref table dim_channel
+ref table dim_date
+ref table snapshot
+
+ref cultureInfo en-US
+

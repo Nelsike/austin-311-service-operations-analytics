@@ -2,7 +2,7 @@
 // All primary measures retain current service, organization, channel and CREATION-date filters.
 
 Primary Requests =
-CALCULATE(COUNTROWS(fact_requests), KEEPFILTERS(fact_requests[in_primary] = 1))
+COALESCE(CALCULATE(COUNTROWS(fact_requests), KEEPFILTERS(fact_requests[in_primary] = 1)), 0)
 
 Reported Closed Requests =
 CALCULATE([Primary Requests], KEEPFILTERS(fact_requests[is_closed] = 1))
@@ -53,7 +53,7 @@ Flag Conflicts In Primary =
 CALCULATE([Primary Requests], KEEPFILTERS(fact_requests[status_flag_conflict] = 1))
 
 All Nontest Intake =
-CALCULATE(COUNTROWS(fact_requests), KEEPFILTERS(fact_requests[is_test] = 0))
+COALESCE(CALCULATE(COUNTROWS(fact_requests), KEEPFILTERS(fact_requests[is_test] = 0)), 0)
 
 Duplicate Marked Intake =
 CALCULATE([All Nontest Intake], KEEPFILTERS(fact_requests[is_business_duplicate] = 1))

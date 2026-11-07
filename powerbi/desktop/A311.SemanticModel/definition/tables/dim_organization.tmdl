@@ -1,0 +1,33 @@
+table dim_organization
+	lineageTag: 91c4a4ef-08f0-5b32-a4ae-0fc7d09024e9
+
+	column organization_key
+		dataType: int64
+		isHidden
+		lineageTag: 6105cffa-e01b-5f52-aee8-2e38e90fbd0f
+		summarizeBy: none
+		sourceColumn: organization_key
+
+	column department
+		dataType: string
+		lineageTag: 3163fa41-ae93-5f17-9a0b-49de4d27d083
+		summarizeBy: none
+		sourceColumn: department
+
+	column group_description
+		dataType: string
+		lineageTag: 77cb010a-9654-5b0c-875d-fcf089a53d8d
+		summarizeBy: none
+		sourceColumn: group_description
+
+	partition dim_organization = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(pProjectFolder & "\data\powerbi\dim_organization.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Nulls = Table.ReplaceValue(Headers, "", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),
+					Typed = Table.TransformColumnTypes(Nulls, {{"organization_key", Int64.Type}, {"department", type text}, {"group_description", type text}}, "en-US")
+				in
+					Typed
+

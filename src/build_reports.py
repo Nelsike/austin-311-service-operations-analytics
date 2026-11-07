@@ -17,6 +17,9 @@ def build_reports(root: Path):
     k = json.loads((root/'reports/kpis.json').read_text(encoding='utf-8'))
     q = json.loads((root/'reports/data_quality.json').read_text(encoding='utf-8'))
     manifest = json.loads((root/'reports/run_manifest.json').read_text(encoding='utf-8'))
+    status_path=root/'reports/portfolio_status.json'
+    status=json.loads(status_path.read_text(encoding='utf-8')) if status_path.exists() else {}
+    desktop_verified=(status.get('power_bi_desktop_validated',False) and status.get('source_sha256')==manifest['source_sha256'])
     services = pd.read_csv(root/'reports/tables/02_service_performance.csv')
     monthly = pd.read_csv(root/'reports/tables/03_monthly_intake.csv')
     backlog = pd.read_csv(root/'reports/tables/04_open_backlog.csv')
@@ -130,6 +133,8 @@ The warehouse passes SQLite integrity and foreign-key checks. Python group media
 
 Power BI Desktop validation remains pending; see `docs/desktop_validation.md`. Data quality does not establish real-world work completion.
 '''
+    if desktop_verified:
+        quality_report=quality_report.replace('Power BI Desktop validation remains pending;', 'Power BI Desktop measures, filters and date roles have been validated against this snapshot;')
     write(root/'reports/data_quality.md',quality_report)
     metadata = json.loads((root/'data/raw/city_metadata.json').read_text(encoding='utf-8'))
     pd.DataFrame([{'export_column':c['name'],'api_field':c['fieldName'],'socrata_type':c['dataTypeName']}
@@ -237,6 +242,13 @@ The private repository stores source code, SQL, documentation, aggregate reports
 
 The public metadata does not provide a named license identifier in the captured `licenseId` field. Attribute the City and confirm the applicable portal terms before redistributing row-level records. This independent portfolio project is not an official City dashboard.
 '''
+    if desktop_verified:
+        readme=readme.replace('**v0.1 — Private working version.** Python/SQL analysis is validated. Power BI Desktop implementation and public portfolio release are pending.', '**v1.0 — Desktop-validated portfolio version.** Python, SQL and the three-page Power BI report are validated. The repository remains private pending the public-release review.')
+        readme=readme.replace('![Static analytical preview; not a Power BI screenshot](reports/dashboard_preview.png)', '![Actual Power BI Desktop report export](reports/dashboard-1.png)')
+        old='The fact/dimension exports and [dashboard plan](powerbi/dashboard_plan.md) are ready for Desktop implementation. The package includes import queries, DAX measures, a theme, relationship instructions and expected acceptance values. **No interactive `.pbix` has been built or validated yet.** The preview above is generated directly from validated Python/SQL results. Desktop import, measure execution, filter behavior and a real dashboard screenshot remain a separate milestone.'
+        new='The native [Power BI project](powerbi/desktop/A311.pbip) contains three interactive pages: operations overview, service comparisons, and reported backlog/quality. It was opened, refreshed, saved and reopened in Power BI Desktop 2.159.1231.0. Seven read-only DAX query checks reconcile the headline metrics, all 43 service percentiles, service/month filter contexts, date roles and relationship integrity to Python/SQL. Month and service selections, filter clearing and an empty backlog were also checked in the actual report. See [validation evidence](docs/desktop_validation.md) and the [native PDF export](reports/Austin-311-Service-Operations-Dashboard.pdf).\n\nTo open it locally, run the cleaning pipeline, then `python src/build_powerbi_project.py` and open `powerbi/desktop/A311.pbip` in Desktop. Refresh the model. The builder sets the local `pProjectFolder` parameter; the repository copy uses a generic path that must be configured on another computer. Local caches and bulk request data are excluded from Git. The PDF and PNGs show the visible table viewport; use the interactive report to scroll through all rows.'
+        readme=readme.replace(old,new)
+        readme=readme.replace('Public release remains pending the Power BI and final presentation review.', 'Public release remains pending the final presentation and repository-visibility review.')
     write(root/'README.md',readme)
 
     targets = [

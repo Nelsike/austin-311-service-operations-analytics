@@ -1,0 +1,457 @@
+{
+  "headline": [
+    {
+      "cohort_rows": 73690,
+      "primary_requests": 69149,
+      "closed_requests": 69131,
+      "open_backlog": 18,
+      "snapshot_closure_share": 0.9997396925479761,
+      "duration_eligible_closed": 69127,
+      "median_closure_days": 0.19408564814814816,
+      "p90_closure_days": 9.026949074074077,
+      "mean_closure_days": 4.404571187144006,
+      "deadline_eligible_closed": 69127,
+      "closed_by_deadline": 67120,
+      "closed_by_recorded_deadline_share": 0.9709664819824381,
+      "open_past_recorded_deadline": 18,
+      "business_duplicates": 4540,
+      "flag_conflicts": 2,
+      "ambiguous_timestamps": 4,
+      "missing_geography_all_intake": 378
+    }
+  ],
+  "signal_filter": [
+    {
+      "requests": 8475,
+      "open_backlog": 1,
+      "median_days": 0.03684027777777778,
+      "p90_days": 4.141840277777776
+    }
+  ],
+  "may_filter": [
+    {
+      "requests": 7062,
+      "open_backlog": 16
+    }
+  ],
+  "empty_backlog_filter": [
+    {
+      "open_backlog": 0,
+      "detail_rows": null
+    }
+  ],
+  "service_percentiles": [
+    {
+      "service_description": "TPW - Activate/Deactivate Work Zone",
+      "requests": 502,
+      "duration_n": 502,
+      "median_days": 0.0,
+      "p90_days": 0.0
+    },
+    {
+      "service_description": "TPW - Alley & Unpaved Street Maintenance",
+      "requests": 392,
+      "duration_n": 391,
+      "median_days": 0.7960416666666666,
+      "p90_days": 3.67494212962963
+    },
+    {
+      "service_description": "TPW - Bicycle Issues",
+      "requests": 419,
+      "duration_n": 419,
+      "median_days": 26.0653125,
+      "p90_days": 55.6167199074074
+    },
+    {
+      "service_description": "TPW - Booting Complaint",
+      "requests": 210,
+      "duration_n": 210,
+      "median_days": 4.807089120370371,
+      "p90_days": 10.798086805555554
+    },
+    {
+      "service_description": "TPW - Bridge Repair",
+      "requests": 84,
+      "duration_n": 83,
+      "median_days": 0.9108680555555555,
+      "p90_days": 28.53230555555555
+    },
+    {
+      "service_description": "TPW - Construction Concerns in Right of Way",
+      "requests": 2309,
+      "duration_n": 2309,
+      "median_days": 0.596550925925926,
+      "p90_days": 2.7088055555555566
+    },
+    {
+      "service_description": "TPW - Curb/Gutter Repair",
+      "requests": 360,
+      "duration_n": 360,
+      "median_days": 0.7715104166666666,
+      "p90_days": 4.051707175925926
+    },
+    {
+      "service_description": "TPW - Debris in Street",
+      "requests": 3018,
+      "duration_n": 3017,
+      "median_days": 0.5017708333333334,
+      "p90_days": 1.6911967592592594
+    },
+    {
+      "service_description": "TPW - Dig Tess Request",
+      "requests": 1981,
+      "duration_n": 1981,
+      "median_days": 0.010520833333333333,
+      "p90_days": 0.07891203703703703
+    },
+    {
+      "service_description": "TPW - Guardrail New/Repair",
+      "requests": 158,
+      "duration_n": 158,
+      "median_days": 0.7276851851851852,
+      "p90_days": 4.108575231481485
+    },
+    {
+      "service_description": "TPW - Lane/Road Closure Notification",
+      "requests": 2250,
+      "duration_n": 2250,
+      "median_days": 0.0,
+      "p90_days": 0.0
+    },
+    {
+      "service_description": "TPW - Mowing Medians",
+      "requests": 440,
+      "duration_n": 439,
+      "median_days": 0.9259606481481482,
+      "p90_days": 16.89417361111111
+    },
+    {
+      "service_description": "TPW - New Sidewalk/Curb Ramp/ADA Route",
+      "requests": 274,
+      "duration_n": 274,
+      "median_days": 7.525833333333333,
+      "p90_days": 30.644277777777788
+    },
+    {
+      "service_description": "TPW - Obstruction in Right of Way",
+      "requests": 2431,
+      "duration_n": 2430,
+      "median_days": 0.7864641203703704,
+      "p90_days": 10.022827546296295
+    },
+    {
+      "service_description": "TPW - Parking Machine Issue",
+      "requests": 1316,
+      "duration_n": 1316,
+      "median_days": 3.090086805555556,
+      "p90_days": 7.901765046296296
+    },
+    {
+      "service_description": "TPW - Parking Sign Maintenance",
+      "requests": 2142,
+      "duration_n": 2141,
+      "median_days": 2.04462962962963,
+      "p90_days": 7.0712731481481494
+    },
+    {
+      "service_description": "TPW - Parking Violation Enforcement",
+      "requests": 19117,
+      "duration_n": 19115,
+      "median_days": 0.07319444444444445,
+      "p90_days": 0.503016203703704
+    },
+    {
+      "service_description": "TPW - Pavement Failure",
+      "requests": 1206,
+      "duration_n": 1206,
+      "median_days": 0.8546006944444444,
+      "p90_days": 9.891857638888888
+    },
+    {
+      "service_description": "TPW - Pay-by-Phone App",
+      "requests": 118,
+      "duration_n": 118,
+      "median_days": 0.8748900462962963,
+      "p90_days": 6.197891203703701
+    },
+    {
+      "service_description": "TPW - Pedestrian Crossing New/Modify",
+      "requests": 242,
+      "duration_n": 242,
+      "median_days": 13.859282407407408,
+      "p90_days": 89.71665277777782
+    },
+    {
+      "service_description": "TPW - Pothole Repair",
+      "requests": 2936,
+      "duration_n": 2935,
+      "median_days": 0.5640046296296296,
+      "p90_days": 1.1137847222222221
+    },
+    {
+      "service_description": "TPW - Road Markings/Striping - Maintenance",
+      "requests": 1018,
+      "duration_n": 1017,
+      "median_days": 53.78181712962963,
+      "p90_days": 77.95334259259259
+    },
+    {
+      "service_description": "TPW - Road Markings/Striping - New",
+      "requests": 479,
+      "duration_n": 479,
+      "median_days": 18.889733796296298,
+      "p90_days": 71.72828703703703
+    },
+    {
+      "service_description": "TPW - Roadway Spillage",
+      "requests": 94,
+      "duration_n": 92,
+      "median_days": 0.7418518518518519,
+      "p90_days": 6.876722222222223
+    },
+    {
+      "service_description": "TPW - School Issues - Crossing Guards",
+      "requests": 57,
+      "duration_n": 57,
+      "median_days": 13.813287037037037,
+      "p90_days": 89.44735648148148
+    },
+    {
+      "service_description": "TPW - School Zone Beacon - Maintenance",
+      "requests": 118,
+      "duration_n": 117,
+      "median_days": 0.9272916666666666,
+      "p90_days": 20.35395138888889
+    },
+    {
+      "service_description": "TPW - School Zone Sign Maintenance",
+      "requests": 88,
+      "duration_n": 87,
+      "median_days": 2.634560185185185,
+      "p90_days": 11.23539814814815
+    },
+    {
+      "service_description": "TPW - Shared Micromobility",
+      "requests": 1581,
+      "duration_n": 1580,
+      "median_days": 0.812511574074074,
+      "p90_days": 3.0840023148148163
+    },
+    {
+      "service_description": "TPW - Sidewalk Repair",
+      "requests": 1453,
+      "duration_n": 1451,
+      "median_days": 0.8469907407407408,
+      "p90_days": 3.569710648148148
+    },
+    {
+      "service_description": "TPW - Special Event",
+      "requests": 321,
+      "duration_n": 321,
+      "median_days": 0.8061111111111111,
+      "p90_days": 2.292291666666667
+    },
+    {
+      "service_description": "TPW - Speed Management",
+      "requests": 1148,
+      "duration_n": 1148,
+      "median_days": 8.86818287037037,
+      "p90_days": 55.93864351851851
+    },
+    {
+      "service_description": "TPW - Street and Bridge Miscellaneous",
+      "requests": 728,
+      "duration_n": 727,
+      "median_days": 0.6501157407407407,
+      "p90_days": 13.077060185185184
+    },
+    {
+      "service_description": "TPW - Street Name Sign Maintenance",
+      "requests": 742,
+      "duration_n": 741,
+      "median_days": 4.858796296296297,
+      "p90_days": 15.944548611111111
+    },
+    {
+      "service_description": "TPW - Street Resurfacing",
+      "requests": 715,
+      "duration_n": 714,
+      "median_days": 1.006122685185185,
+      "p90_days": 47.819695601851905
+    },
+    {
+      "service_description": "TPW - Traffic Sign Emergency",
+      "requests": 952,
+      "duration_n": 952,
+      "median_days": 0.7235069444444444,
+      "p90_days": 2.656409722222222
+    },
+    {
+      "service_description": "TPW - Traffic Sign Maintenance",
+      "requests": 2335,
+      "duration_n": 2335,
+      "median_days": 1.916724537037037,
+      "p90_days": 7.854624999999995
+    },
+    {
+      "service_description": "TPW - Traffic Sign New",
+      "requests": 1266,
+      "duration_n": 1265,
+      "median_days": 33.25730324074074,
+      "p90_days": 72.94684722222222
+    },
+    {
+      "service_description": "TPW - Traffic Signal - Maintenance",
+      "requests": 8475,
+      "duration_n": 8474,
+      "median_days": 0.03684027777777778,
+      "p90_days": 4.141840277777776
+    },
+    {
+      "service_description": "TPW - Traffic Signal - Modification",
+      "requests": 903,
+      "duration_n": 903,
+      "median_days": 0.12886574074074075,
+      "p90_days": 26.013145833333336
+    },
+    {
+      "service_description": "TPW - Traffic Signal - New",
+      "requests": 394,
+      "duration_n": 394,
+      "median_days": 9.141030092592592,
+      "p90_days": 43.2973125
+    },
+    {
+      "service_description": "TPW - Tree Issue Right of Way",
+      "requests": 3536,
+      "duration_n": 3536,
+      "median_days": 1.0549652777777778,
+      "p90_days": 14.752638888888889
+    },
+    {
+      "service_description": "TPW - Utility Cut Repair",
+      "requests": 353,
+      "duration_n": 353,
+      "median_days": 0.4884953703703704,
+      "p90_days": 3.5727893518518523
+    },
+    {
+      "service_description": "TPW - View Obstruction and Fencing at Intersection",
+      "requests": 488,
+      "duration_n": 488,
+      "median_days": 14.466145833333334,
+      "p90_days": 26.8692650462963
+    }
+  ],
+  "closure_month_role": [
+    {
+      "year_month": null,
+      "cohort_closures": 0
+    },
+    {
+      "year_month": "2025-01",
+      "cohort_closures": 3940
+    },
+    {
+      "year_month": "2025-02",
+      "cohort_closures": 4594
+    },
+    {
+      "year_month": "2025-03",
+      "cohort_closures": 5687
+    },
+    {
+      "year_month": "2025-04",
+      "cohort_closures": 5859
+    },
+    {
+      "year_month": "2025-05",
+      "cohort_closures": 6763
+    },
+    {
+      "year_month": "2025-06",
+      "cohort_closures": 6659
+    },
+    {
+      "year_month": "2025-07",
+      "cohort_closures": 6219
+    },
+    {
+      "year_month": "2025-08",
+      "cohort_closures": 6105
+    },
+    {
+      "year_month": "2025-09",
+      "cohort_closures": 6405
+    },
+    {
+      "year_month": "2025-10",
+      "cohort_closures": 6326
+    },
+    {
+      "year_month": "2025-11",
+      "cohort_closures": 5144
+    },
+    {
+      "year_month": "2025-12",
+      "cohort_closures": 4818
+    },
+    {
+      "year_month": "2026-01",
+      "cohort_closures": 438
+    },
+    {
+      "year_month": "2026-02",
+      "cohort_closures": 143
+    },
+    {
+      "year_month": "2026-03",
+      "cohort_closures": 18
+    },
+    {
+      "year_month": "2026-04",
+      "cohort_closures": 4
+    },
+    {
+      "year_month": "2026-05",
+      "cohort_closures": 4
+    },
+    {
+      "year_month": "2026-06",
+      "cohort_closures": 0
+    },
+    {
+      "year_month": "2026-07",
+      "cohort_closures": 3
+    },
+    {
+      "year_month": "2026-08",
+      "cohort_closures": 0
+    },
+    {
+      "year_month": "2026-09",
+      "cohort_closures": 2
+    },
+    {
+      "year_month": "2026-10",
+      "cohort_closures": 0
+    },
+    {
+      "year_month": "2026-11",
+      "cohort_closures": 0
+    },
+    {
+      "year_month": "2026-12",
+      "cohort_closures": 0
+    }
+  ],
+  "relationship_orphans": [
+    {
+      "service": null,
+      "organization": null,
+      "channel": null,
+      "created_date": null,
+      "closed_date": null
+    }
+  ]
+}

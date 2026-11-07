@@ -1,0 +1,263 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "dim_service.service_description": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_service",
+			          "ConceptualProperty": "service_description"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Service type": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_requests.primary_requests": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_requests",
+			          "ConceptualProperty": "Primary Requests"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Requests": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_requests.duration_eligible_closed": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_requests",
+			          "ConceptualProperty": "Duration Eligible Closed"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Eligible N": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_requests.median_closure_days": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_requests",
+			          "ConceptualProperty": "Median Closure Days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Median days": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_requests.p90_closure_days": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_requests",
+			          "ConceptualProperty": "P90 Closure Days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "P90 days": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_requests.closed_by_recorded_deadline_share": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_requests",
+			          "ConceptualProperty": "Closed By Recorded Deadline Share"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "By deadline": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_requests.reported_open_backlog": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_requests",
+			          "ConceptualProperty": "Reported Open Backlog"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Reported open": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_requests.request_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_requests",
+			          "ConceptualProperty": "request_number"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Request": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_requests.created_local": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_requests",
+			          "ConceptualProperty": "created_local"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Created": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_requests.last_updated_local": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_requests",
+			          "ConceptualProperty": "last_updated_local"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Last update": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_requests.deadline_local": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_requests",
+			          "ConceptualProperty": "deadline_local"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Recorded due": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_requests.open_age_by_request": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_requests",
+			          "ConceptualProperty": "Open Age By Request"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Age days": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

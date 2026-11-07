@@ -1,0 +1,27 @@
+table dim_service
+	lineageTag: 7531e1df-46d1-51cc-adf3-af1f26cb856f
+
+	column service_key
+		dataType: int64
+		isHidden
+		lineageTag: 11c3eaca-627b-5e3f-86ee-aee029d975c7
+		summarizeBy: none
+		sourceColumn: service_key
+
+	column service_description
+		dataType: string
+		lineageTag: 9e6f3a2d-481e-52f3-a0a9-ce46e2eb5890
+		summarizeBy: none
+		sourceColumn: service_description
+
+	partition dim_service = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(pProjectFolder & "\data\powerbi\dim_service.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Nulls = Table.ReplaceValue(Headers, "", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),
+					Typed = Table.TransformColumnTypes(Nulls, {{"service_key", Int64.Type}, {"service_description", type text}}, "en-US")
+				in
+					Typed
+

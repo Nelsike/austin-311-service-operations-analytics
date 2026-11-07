@@ -1,0 +1,26 @@
+relationship a480ab1f-522b-556f-b023-9103c1bc69a5
+	fromColumn: fact_requests.service_key
+	toColumn: dim_service.service_key
+
+relationship 968e4687-143d-5df0-a68b-7752988bdded
+	fromColumn: fact_requests.organization_key
+	toColumn: dim_organization.organization_key
+
+relationship b9170fe2-4d0f-5dc4-aceb-5769cf75286b
+	fromColumn: fact_requests.channel_key
+	toColumn: dim_channel.channel_key
+
+relationship a8da81ea-e268-5167-8a18-f3dded3f1a41
+	fromColumn: fact_requests.created_date_key
+	toColumn: dim_date.date_key
+
+relationship d1fe2384-d74f-5f7b-9f89-f3011abe8256
+	isActive: false
+	fromColumn: fact_requests.closed_date_key
+	toColumn: dim_date.date_key
+
+relationship f1dcb0d0-a144-5a77-a81a-d0ced08c08ab
+	isActive: false
+	fromColumn: fact_requests.deadline_date_key
+	toColumn: dim_date.date_key
+

@@ -8,6 +8,6 @@ test_open_status_beats_inconsistent_source_open_flag (test_pipeline.PipelineBoun
 test_spring_dst_is_23_elapsed_hours (test_pipeline.PipelineBoundaries.test_spring_dst_is_23_elapsed_hours) ... ok
 
 ----------------------------------------------------------------------
-Ran 8 tests in 0.842s
+Ran 8 tests in 0.850s
 
 OK

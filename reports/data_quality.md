@@ -29,4 +29,4 @@ Missingness is assessed before any imputation (none is performed). The full fiel
 
 The warehouse passes SQLite integrity and foreign-key checks. Python group medians/P90 values agree with independently implemented SQL continuous percentiles to 1e-10 days. Monthly creation counts and closure-month counts reconcile to their respective primary totals. Synthetic tests exercise calendar-year boundaries, daylight saving, ambiguous times, business duplicates, testing records, negative intervals and source-flag disagreements.
 
-Power BI Desktop validation remains pending; see `docs/desktop_validation.md`. Data quality does not establish real-world work completion.
+Power BI Desktop measures, filters and date roles have been validated against this snapshot; see `docs/desktop_validation.md`. Data quality does not establish real-world work completion.

@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0 — November 7, 2026
+
+- Build and validate the native three-page Power BI Desktop project.
+- Reconcile actual DAX results to the Python/SQL evidence, including all 43 service percentiles and the closure-date role.
+- Test month/service interactions, filter clearing and the empty-backlog state in Desktop.
+- Save/reopen the report and export its actual pages to a visually reviewed PDF and PNGs.
+- Prepare the LinkedIn project entry; public repository visibility and profile attachment remain pending review.
+
 ## v0.1 — November 7, 2026
 
 Initial private working version of Austin 311 Service Operations Analytics.

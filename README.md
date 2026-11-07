@@ -2,11 +2,11 @@
 
 **Python · SQL · Power BI model design · Public-service operations**
 
-**v0.1 — Private working version.** Python/SQL analysis is validated. Power BI Desktop implementation and public portfolio release are pending.
+**v1.0 — Desktop-validated portfolio version.** Python, SQL and the three-page Power BI report are validated. The repository remains private pending the public-release review.
 
 An analysis of 2025-created Transportation and Public Works service requests: reported demand, administrative closure intervals, recorded deadlines and the reported open backlog visible in a November 7, 2026 export.
 
-![Static analytical preview; not a Power BI screenshot](reports/dashboard_preview.png)
+![Actual Power BI Desktop report export](reports/dashboard-1.png)
 
 The business question is how managers can identify workload patterns and service types that deserve closer review. This project emphasizes defensible definitions, reproducibility and operational recommendations supported by the published data.
 
@@ -81,7 +81,9 @@ This uses the full CSV export endpoint to avoid silent API default row limits. M
 
 ## Power BI readiness
 
-The fact/dimension exports and [dashboard plan](powerbi/dashboard_plan.md) are ready for Desktop implementation. The package includes import queries, DAX measures, a theme, relationship instructions and expected acceptance values. **No interactive `.pbix` has been built or validated yet.** The preview above is generated directly from validated Python/SQL results. Desktop import, measure execution, filter behavior and a real dashboard screenshot remain a separate milestone.
+The native [Power BI project](powerbi/desktop/A311.pbip) contains three interactive pages: operations overview, service comparisons, and reported backlog/quality. It was opened, refreshed, saved and reopened in Power BI Desktop 2.159.1231.0. Seven read-only DAX query checks reconcile the headline metrics, all 43 service percentiles, service/month filter contexts, date roles and relationship integrity to Python/SQL. Month and service selections, filter clearing and an empty backlog were also checked in the actual report. See [validation evidence](docs/desktop_validation.md) and the [native PDF export](reports/Austin-311-Service-Operations-Dashboard.pdf).
+
+To open it locally, run the cleaning pipeline, then `python src/build_powerbi_project.py` and open `powerbi/desktop/A311.pbip` in Desktop. Refresh the model. The builder sets the local `pProjectFolder` parameter; the repository copy uses a generic path that must be configured on another computer. Local caches and bulk request data are excluded from Git. The PDF and PNGs show the visible table viewport; use the interactive report to scroll through all rows.
 
 ## Analytical choices
 
@@ -93,7 +95,7 @@ Recommended follow-up: verify the small reported backlog in the live system; rev
 
 The build checks IDs, schema, binary flags, timestamps, foreign keys and SQLite integrity. Independently written SQL/Python median and P90 calculations reconcile, as do intake and dated closure-month totals. Eight synthetic tests pass for the v1 build. See [run evidence](reports/run_manifest.json) and [Desktop validation status](docs/desktop_validation.md).
 
-The private repository stores source code, SQL, documentation, aggregate reports, theme and preview. Raw exports, generated row-level tables, request-level exception/backlog CSVs, the database and `.pbix` files are excluded by `.gitignore`. The full source is approximately 163 MB and exceeds GitHub's ordinary single-file limit. For exact public reproduction, arrange a versioned data-release asset and verify redistribution terms first. A fresh live download is analytically reproducible but may not reproduce the frozen snapshot's numbers. Public release remains pending the Power BI and final presentation review.
+The private repository stores source code, SQL, documentation, aggregate reports, theme and preview. Raw exports, generated row-level tables, request-level exception/backlog CSVs, the database and `.pbix` files are excluded by `.gitignore`. The full source is approximately 163 MB and exceeds GitHub's ordinary single-file limit. For exact public reproduction, arrange a versioned data-release asset and verify redistribution terms first. A fresh live download is analytically reproducible but may not reproduce the frozen snapshot's numbers. Public release remains pending the final presentation and repository-visibility review.
 
 ## Sources and attribution
 
