@@ -1,0 +1,3 @@
+intake_class,requests,closed,open_backlog,duration_n,mean_closure_days
+Nonduplicate,69149,69131,18,69127,4.404571187144006
+Duplicate-marked,4540,4539,1,4539,2.2031133621779966

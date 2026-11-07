@@ -1,0 +1,18 @@
+measure,expected_unfiltered_value,unit
+Gross intake,73690.0,rows
+All Nontest Intake,73689.0,rows
+Primary Requests,69149.0,rows
+Reported Closed Requests,69131.0,rows
+Reported Open Backlog,18.0,rows
+Snapshot Closure Share,0.9997396925479761,fraction
+Duration Eligible Closed,69127.0,rows
+Median Closure Days,0.19408564814814816,elapsed days
+Median Closure Hours,4.658055555555556,elapsed hours
+P90 Closure Days,9.026949074074077,elapsed days
+Deadline Eligible Closed,69127.0,rows
+Closed By Recorded Deadline,67120.0,rows
+Closed By Recorded Deadline Share,0.9709664819824381,fraction
+Reported Open Past Deadline,18.0,rows
+Duplicate Marked Intake,4540.0,rows
+Duplicate Marked Share,0.06161028104601772,fraction
+Flag Conflicts In Primary,2.0,rows

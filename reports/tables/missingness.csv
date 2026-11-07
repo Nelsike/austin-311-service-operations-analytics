@@ -1,0 +1,26 @@
+field,missing_count,missing_pct
+Service Request Number,0,0.0
+Department,0,0.0
+Group Description,0,0.0
+Service Request Description,0,0.0
+Method Received,0,0.0
+Service Request Status,0,0.0
+Is Duplicate,0,0.0
+Status Change Date,0,0.0
+Created Date,0,0.0
+Overdue On Date,0,0.0
+Last Update Date,0,0.0
+Close Date,19,0.025783688424480932
+Service Request Age Days,0,0.0
+Response Days,0,0.0
+Is Open,0,0.0
+Is Closed,0,0.0
+Is Overdue,0,0.0
+Is Closed on Time,0,0.0
+Is Closed Late,0,0.0
+Number of Days Late,0,0.0
+Fiscal Year,0,0.0
+Service Request Location,378,0.5129596960238838
+State Plane X Coordinate,378,0.5129596960238838
+State Plane Y Coordinate,378,0.5129596960238838
+Location,378,0.5129596960238838

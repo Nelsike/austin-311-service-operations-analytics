@@ -1,0 +1,1964 @@
+{
+  "id" : "38mr-dwji",
+  "name" : "311 Service Requests - Austin Transportation and Public Works",
+  "assetType" : "dataset",
+  "attribution" : "City of Austin, Texas - data.austintexas.gov",
+  "averageRating" : 0,
+  "category" : "Transportation and Mobility",
+  "createdAt" : 1692038116,
+  "description" : "This dataset lists all the 311 service requests from the public assigned to the Austin Transportation and Public Works department at the City of Austin starting from fiscal year 10/01/2021 to present. This dataset is updated twice a day around 2:36AM and 1:36PM Central Time (CT) using the sodapy Python library.\n\nNote: The 311 Service Requests are filtered by the “Department” column for Transportation or Public Works. All date columns used is reported in Central Time (CT).",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "domainCName" : "data.austintexas.gov",
+  "downloadCount" : 5890,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 40769415,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1722353479,
+  "publicationGroup" : 19254923,
+  "publicationStage" : "published",
+  "rowIdentifierColumnId" : 597232558,
+  "rowsUpdatedAt" : 1794040984,
+  "rowsUpdatedBy" : "8t3r-wq64",
+  "tableId" : 19603133,
+  "totalTimesRated" : 0,
+  "viewCount" : 607,
+  "viewLastModified" : 1775246690,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1762809953,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 7196152,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1762809953,
+    "targetAudience" : "public",
+    "workflowId" : 3284,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1762809953,
+      "failureCount" : 0,
+      "startedAt" : 1762809953,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "8t3r-wq64",
+      "displayName" : "transportation.data@austintexas.gov"
+    }
+  }, {
+    "message" : "The `strict_permissions` flag must be on to enable internal approvals.",
+    "state" : "unsubmittable",
+    "targetAudience" : "internal",
+    "workflowId" : 4707
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 597232558,
+    "name" : "Service Request Number",
+    "dataTypeName" : "text",
+    "description" : "The service request number.",
+    "fieldName" : "service_request_sr_number",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 147956153,
+    "cachedContents" : {
+      "non_null" : "376135",
+      "largest" : "26-00359721",
+      "null" : "0",
+      "top" : [ {
+        "item" : "21-00447147",
+        "count" : "1"
+      }, {
+        "item" : "21-00447181",
+        "count" : "1"
+      }, {
+        "item" : "21-00447199",
+        "count" : "1"
+      }, {
+        "item" : "21-00447201",
+        "count" : "1"
+      }, {
+        "item" : "21-00447204",
+        "count" : "1"
+      }, {
+        "item" : "21-00447209",
+        "count" : "1"
+      }, {
+        "item" : "21-00447216",
+        "count" : "1"
+      }, {
+        "item" : "21-00447219",
+        "count" : "1"
+      }, {
+        "item" : "21-00447222",
+        "count" : "1"
+      }, {
+        "item" : "21-00447225",
+        "count" : "1"
+      }, {
+        "item" : "21-00447229",
+        "count" : "1"
+      }, {
+        "item" : "21-00447248",
+        "count" : "1"
+      }, {
+        "item" : "21-00447255",
+        "count" : "1"
+      }, {
+        "item" : "21-00447270",
+        "count" : "1"
+      }, {
+        "item" : "21-00447283",
+        "count" : "1"
+      }, {
+        "item" : "21-00447284",
+        "count" : "1"
+      }, {
+        "item" : "21-00447286",
+        "count" : "1"
+      }, {
+        "item" : "21-00447289",
+        "count" : "1"
+      }, {
+        "item" : "21-00447296",
+        "count" : "1"
+      }, {
+        "item" : "21-00447144",
+        "count" : "1"
+      } ],
+      "smallest" : "21-00447144",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : { }
+  }, {
+    "id" : 597232559,
+    "name" : "Department",
+    "dataTypeName" : "text",
+    "description" : "The department the 311 service request is assigned to. It is filtered to only Transportation or Public Works.",
+    "fieldName" : "department",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 147956164,
+    "cachedContents" : {
+      "non_null" : "376135",
+      "largest" : "Transportation and Public Works",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Austin Transportation and Public Works",
+        "count" : "175496"
+      }, {
+        "item" : "Transportation",
+        "count" : "166823"
+      }, {
+        "item" : "Transportation and Public Works",
+        "count" : "18761"
+      }, {
+        "item" : "Public Works",
+        "count" : "15055"
+      } ],
+      "smallest" : "Austin Transportation and Public Works",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : { }
+  }, {
+    "id" : 597232560,
+    "name" : "Group Description",
+    "dataTypeName" : "text",
+    "description" : "The group the service request is assigned to.",
+    "fieldName" : "group_description",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 147956144,
+    "cachedContents" : {
+      "non_null" : "376135",
+      "largest" : "Vehicle Immobilization/Booting",
+      "null" : "0",
+      "top" : [ {
+        "item" : "TPW - Arterial Management",
+        "count" : "46985"
+      }, {
+        "item" : "TPW - Parking Enterprise",
+        "count" : "46729"
+      }, {
+        "item" : "TPW - Street and Bridge",
+        "count" : "44860"
+      }, {
+        "item" : "Parking Enforcement-",
+        "count" : "44360"
+      }, {
+        "item" : "Street and Bridge",
+        "count" : "31044"
+      }, {
+        "item" : "Arterial Management",
+        "count" : "23904"
+      }, {
+        "item" : "TPW - Signs and Markings",
+        "count" : "23665"
+      }, {
+        "item" : "TPW - Right of Way Management",
+        "count" : "16514"
+      }, {
+        "item" : "Signs and Markings",
+        "count" : "15416"
+      }, {
+        "item" : "Right of Way Management",
+        "count" : "14018"
+      }, {
+        "item" : "Austin Transportation and Public Works",
+        "count" : "13779"
+      }, {
+        "item" : "TPW - Transportation Engineering",
+        "count" : "11538"
+      }, {
+        "item" : "TPW - Strategic Mobility Projects",
+        "count" : "10036"
+      }, {
+        "item" : "Strategic Mobility Projects",
+        "count" : "9119"
+      }, {
+        "item" : "Transportation Engineering",
+        "count" : "7195"
+      }, {
+        "item" : "Dockless Mobility Services",
+        "count" : "6722"
+      }, {
+        "item" : "Parking Meters - T",
+        "count" : "3002"
+      }, {
+        "item" : "Transportation and Public Works",
+        "count" : "2276"
+      }, {
+        "item" : "TPW - Active Transportation & Street Design",
+        "count" : "1570"
+      }, {
+        "item" : "TPW - Special Events",
+        "count" : "958"
+      } ],
+      "smallest" : "Active Transportation",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : { }
+  }, {
+    "id" : 597232561,
+    "name" : "Service Request Description",
+    "dataTypeName" : "text",
+    "description" : "The service request description.",
+    "fieldName" : "sr_description",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 147956142,
+    "cachedContents" : {
+      "non_null" : "376135",
+      "largest" : "ZZ - Tree Issue ROW",
+      "null" : "0",
+      "top" : [ {
+        "item" : "TPW - Parking Violation Enforcement",
+        "count" : "75049"
+      }, {
+        "item" : "TPW - Traffic Signal - Maintenance",
+        "count" : "47659"
+      }, {
+        "item" : "TPW - Shared Micromobility",
+        "count" : "19155"
+      }, {
+        "item" : "TPW - Pothole Repair",
+        "count" : "13966"
+      }, {
+        "item" : "TPW - Traffic Sign Maintenance",
+        "count" : "13104"
+      }, {
+        "item" : "TPW - Tree Issue Right of Way",
+        "count" : "13019"
+      }, {
+        "item" : "ATD - Parking Violation Enforcement",
+        "count" : "12764"
+      }, {
+        "item" : "TPW - Debris in Street",
+        "count" : "11926"
+      }, {
+        "item" : "TPW - Obstruction in Right of Way",
+        "count" : "10155"
+      }, {
+        "item" : "TPW - Lane/Road Closure Notification",
+        "count" : "8653"
+      }, {
+        "item" : "ATD - Traffic Signal - Maintenance",
+        "count" : "8577"
+      }, {
+        "item" : "TPW - Parking Sign Maintenance",
+        "count" : "8296"
+      }, {
+        "item" : "ZZ - Tree Issue ROW",
+        "count" : "7336"
+      }, {
+        "item" : "TPW - Construction Concerns in Right of Way",
+        "count" : "7047"
+      }, {
+        "item" : "ATD - Concerns in Right of Way",
+        "count" : "6775"
+      }, {
+        "item" : "ATD - Shared Micromobility",
+        "count" : "6722"
+      }, {
+        "item" : "TPW - Dig Tess Request",
+        "count" : "6297"
+      }, {
+        "item" : "TPW - Sidewalk Repair",
+        "count" : "6117"
+      }, {
+        "item" : "TPW - Traffic Sign New",
+        "count" : "5522"
+      }, {
+        "item" : "TPW - Speed Management",
+        "count" : "5132"
+      } ],
+      "smallest" : "ATD - Bicycle &amp; Pedestrian Issues",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : { }
+  }, {
+    "id" : 597232562,
+    "name" : "Method Received",
+    "dataTypeName" : "text",
+    "description" : "The method used to receive the service request.",
+    "fieldName" : "method_received",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 147956143,
+    "cachedContents" : {
+      "non_null" : "376135",
+      "largest" : "Web",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Spot311 Interface",
+        "count" : "181749"
+      }, {
+        "item" : "Phone",
+        "count" : "163999"
+      }, {
+        "item" : "Citizen Web Intake App",
+        "count" : "12581"
+      }, {
+        "item" : "Web",
+        "count" : "7036"
+      }, {
+        "item" : "Mobile Device",
+        "count" : "6816"
+      }, {
+        "item" : "E-Mail",
+        "count" : "3450"
+      }, {
+        "item" : "Other",
+        "count" : "440"
+      }, {
+        "item" : "Mobile Created",
+        "count" : "23"
+      }, {
+        "item" : "Open311",
+        "count" : "15"
+      }, {
+        "item" : "Chat",
+        "count" : "12"
+      }, {
+        "item" : "Social Media",
+        "count" : "5"
+      }, {
+        "item" : "Walk In",
+        "count" : "2"
+      }, {
+        "item" : "External Interface",
+        "count" : "2"
+      }, {
+        "item" : "CSR - Follow On SR",
+        "count" : "1"
+      }, {
+        "item" : "Interface",
+        "count" : "1"
+      }, {
+        "item" : "Mail",
+        "count" : "1"
+      }, {
+        "item" : "Voice Mail",
+        "count" : "1"
+      }, {
+        "item" : "Generated in House",
+        "count" : "1"
+      } ],
+      "smallest" : "Chat",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : { }
+  }, {
+    "id" : 597232563,
+    "name" : "Service Request Status",
+    "dataTypeName" : "text",
+    "description" : "The service request status.",
+    "fieldName" : "sr_status",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 147956145,
+    "cachedContents" : {
+      "non_null" : "376135",
+      "largest" : "TO BE DELETED",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Closed",
+        "count" : "325104"
+      }, {
+        "item" : "Duplicate (closed)",
+        "count" : "25063"
+      }, {
+        "item" : "Resolved",
+        "count" : "25052"
+      }, {
+        "item" : "Open",
+        "count" : "756"
+      }, {
+        "item" : "TO BE DELETED",
+        "count" : "81"
+      }, {
+        "item" : "Duplicate (open)",
+        "count" : "40"
+      }, {
+        "item" : "Closed -Incomplete Information",
+        "count" : "29"
+      }, {
+        "item" : "CancelledTesting",
+        "count" : "9"
+      }, {
+        "item" : "New",
+        "count" : "1"
+      } ],
+      "smallest" : "CancelledTesting",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : { }
+  }, {
+    "id" : 597232564,
+    "name" : "Is Duplicate",
+    "dataTypeName" : "number",
+    "description" : "Boolean value on whether the service request is a duplicate of an existing service request.",
+    "fieldName" : "is_duplicate_1_0",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147956146,
+    "cachedContents" : {
+      "non_null" : "376135",
+      "largest" : "1",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "351032"
+      }, {
+        "item" : "1",
+        "count" : "25103"
+      } ],
+      "smallest" : "0",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 597232565,
+    "name" : "Status Change Date",
+    "dataTypeName" : "calendar_date",
+    "description" : "The last date where the status of the service request was changed",
+    "fieldName" : "status_change_date",
+    "position" : 8,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 147956147,
+    "cachedContents" : {
+      "non_null" : "376135",
+      "largest" : "2026-11-06T07:57:11.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025-06-03T12:03:56.000",
+        "count" : "24"
+      }, {
+        "item" : "2025-05-28T08:56:41.000",
+        "count" : "24"
+      }, {
+        "item" : "2025-05-28T08:54:58.000",
+        "count" : "20"
+      }, {
+        "item" : "2024-01-05T16:07:49.000",
+        "count" : "19"
+      }, {
+        "item" : "2025-06-03T12:06:27.000",
+        "count" : "19"
+      }, {
+        "item" : "2025-05-27T07:05:22.000",
+        "count" : "14"
+      }, {
+        "item" : "2025-06-18T10:13:21.000",
+        "count" : "13"
+      }, {
+        "item" : "2026-01-13T09:27:04.000",
+        "count" : "12"
+      }, {
+        "item" : "2025-06-09T13:39:31.000",
+        "count" : "11"
+      }, {
+        "item" : "2024-02-27T08:31:51.000",
+        "count" : "10"
+      }, {
+        "item" : "2024-08-27T10:14:05.000",
+        "count" : "10"
+      }, {
+        "item" : "2025-05-20T10:58:44.000",
+        "count" : "10"
+      }, {
+        "item" : "2025-05-28T08:58:40.000",
+        "count" : "9"
+      }, {
+        "item" : "2024-01-30T05:47:49.000",
+        "count" : "9"
+      }, {
+        "item" : "2025-05-28T08:59:41.000",
+        "count" : "7"
+      }, {
+        "item" : "2024-01-26T10:37:33.000",
+        "count" : "7"
+      }, {
+        "item" : "2024-09-13T10:18:04.000",
+        "count" : "7"
+      }, {
+        "item" : "2023-10-31T15:28:43.000",
+        "count" : "7"
+      }, {
+        "item" : "2024-06-25T18:37:00.000",
+        "count" : "6"
+      }, {
+        "item" : "2024-08-27T10:13:24.000",
+        "count" : "6"
+      } ],
+      "smallest" : "2021-10-01T07:03:49.000",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : { }
+  }, {
+    "id" : 597232566,
+    "name" : "Created Date",
+    "dataTypeName" : "calendar_date",
+    "description" : "The created date of the service request.",
+    "fieldName" : "created_date",
+    "position" : 9,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 147956148,
+    "cachedContents" : {
+      "non_null" : "376135",
+      "largest" : "2026-11-06T07:57:11.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2022-03-03T17:51:08.000",
+        "count" : "3"
+      }, {
+        "item" : "2022-01-05T17:28:58.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-10-05T16:59:56.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-11-18T09:51:36.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-12-15T13:39:41.000",
+        "count" : "2"
+      }, {
+        "item" : "2022-01-05T08:52:05.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-10-08T08:59:14.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-11-05T16:19:30.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-11-13T09:13:29.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-11-16T08:30:43.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-12-08T16:56:24.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-12-09T08:54:11.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-12-17T15:17:11.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-12-29T15:22:11.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-11-11T14:17:21.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-10-06T11:56:47.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-10-26T16:14:28.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-10-27T14:30:23.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-11-11T14:21:20.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-12-08T14:16:08.000",
+        "count" : "2"
+      } ],
+      "smallest" : "2021-10-01T00:39:52.000",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : { }
+  }, {
+    "id" : 597232567,
+    "name" : "Overdue On Date",
+    "dataTypeName" : "calendar_date",
+    "description" : "The overdue on date of the service request depending on the created date. Usually within 30 calendar days. ",
+    "fieldName" : "overdue_on_date",
+    "position" : 10,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 147956149,
+    "cachedContents" : {
+      "non_null" : "376135",
+      "largest" : "2027-07-21T13:04:47.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2024-10-01T11:20:27.000",
+        "count" : "3"
+      }, {
+        "item" : "2024-02-20T14:49:57.000",
+        "count" : "3"
+      }, {
+        "item" : "2023-08-02T10:32:55.000",
+        "count" : "3"
+      }, {
+        "item" : "2022-07-27T12:23:52.000",
+        "count" : "3"
+      }, {
+        "item" : "2021-12-03T16:27:46.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-12-08T14:25:45.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-12-08T16:54:50.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-11-15T11:51:38.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-11-24T09:13:29.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-11-16T09:37:36.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-11-29T07:43:34.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-12-02T15:58:27.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-12-06T10:20:52.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-12-07T15:03:07.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-10-21T09:21:26.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-10-22T14:50:55.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-10-20T14:19:17.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-10-21T17:11:55.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-11-10T15:23:01.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-10-18T08:54:26.000",
+        "count" : "2"
+      } ],
+      "smallest" : "2021-10-02T07:39:18.000",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : { }
+  }, {
+    "id" : 597232568,
+    "name" : "Last Update Date",
+    "dataTypeName" : "calendar_date",
+    "description" : "The last updated date of the service request.",
+    "fieldName" : "last_update_date",
+    "position" : 11,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 147956151,
+    "cachedContents" : {
+      "non_null" : "376135",
+      "largest" : "2026-11-06T07:59:12.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025-05-28T08:56:41.000",
+        "count" : "24"
+      }, {
+        "item" : "2025-06-03T12:03:56.000",
+        "count" : "24"
+      }, {
+        "item" : "2025-05-28T08:54:58.000",
+        "count" : "21"
+      }, {
+        "item" : "2025-06-03T12:06:26.000",
+        "count" : "19"
+      }, {
+        "item" : "2024-01-05T16:07:49.000",
+        "count" : "19"
+      }, {
+        "item" : "2026-10-31T00:11:21.000",
+        "count" : "18"
+      }, {
+        "item" : "2025-05-27T07:05:22.000",
+        "count" : "16"
+      }, {
+        "item" : "2026-10-31T00:11:20.000",
+        "count" : "14"
+      }, {
+        "item" : "2025-06-18T10:13:21.000",
+        "count" : "13"
+      }, {
+        "item" : "2026-01-13T09:27:04.000",
+        "count" : "12"
+      }, {
+        "item" : "2024-02-27T08:31:51.000",
+        "count" : "10"
+      }, {
+        "item" : "2025-06-09T13:39:30.000",
+        "count" : "10"
+      }, {
+        "item" : "2025-05-20T10:58:44.000",
+        "count" : "10"
+      }, {
+        "item" : "2024-08-27T10:14:05.000",
+        "count" : "10"
+      }, {
+        "item" : "2025-05-28T08:58:40.000",
+        "count" : "9"
+      }, {
+        "item" : "2024-01-30T05:47:49.000",
+        "count" : "8"
+      }, {
+        "item" : "2023-09-12T09:09:22.000",
+        "count" : "7"
+      }, {
+        "item" : "2024-01-26T10:37:33.000",
+        "count" : "7"
+      }, {
+        "item" : "2024-01-22T11:56:47.000",
+        "count" : "7"
+      }, {
+        "item" : "2023-10-31T15:28:43.000",
+        "count" : "7"
+      } ],
+      "smallest" : "2021-10-01T07:03:49.000",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : { }
+  }, {
+    "id" : 597232569,
+    "name" : "Close Date",
+    "dataTypeName" : "calendar_date",
+    "description" : "The date the service request was closed.",
+    "fieldName" : "close_date",
+    "position" : 12,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 147956152,
+    "cachedContents" : {
+      "non_null" : "375338",
+      "largest" : "2026-11-06T07:53:27.000",
+      "null" : "797",
+      "top" : [ {
+        "item" : "2025-06-03T12:03:56.000",
+        "count" : "24"
+      }, {
+        "item" : "2025-05-28T08:56:41.000",
+        "count" : "24"
+      }, {
+        "item" : "2025-05-28T08:54:58.000",
+        "count" : "20"
+      }, {
+        "item" : "2024-01-05T16:07:49.000",
+        "count" : "19"
+      }, {
+        "item" : "2025-06-03T12:06:27.000",
+        "count" : "19"
+      }, {
+        "item" : "2025-05-27T07:05:22.000",
+        "count" : "14"
+      }, {
+        "item" : "2025-06-18T10:13:21.000",
+        "count" : "13"
+      }, {
+        "item" : "2026-01-13T09:27:04.000",
+        "count" : "12"
+      }, {
+        "item" : "2025-06-09T13:39:31.000",
+        "count" : "11"
+      }, {
+        "item" : "2024-02-27T08:31:51.000",
+        "count" : "10"
+      }, {
+        "item" : "2024-08-27T10:14:05.000",
+        "count" : "10"
+      }, {
+        "item" : "2025-05-20T10:58:44.000",
+        "count" : "10"
+      }, {
+        "item" : "2025-05-28T08:58:40.000",
+        "count" : "9"
+      }, {
+        "item" : "2024-01-30T05:47:49.000",
+        "count" : "9"
+      }, {
+        "item" : "2025-05-28T08:59:41.000",
+        "count" : "7"
+      }, {
+        "item" : "2024-01-26T10:37:33.000",
+        "count" : "7"
+      }, {
+        "item" : "2024-09-13T10:18:04.000",
+        "count" : "7"
+      }, {
+        "item" : "2023-10-31T15:28:43.000",
+        "count" : "7"
+      }, {
+        "item" : "2024-06-25T18:37:00.000",
+        "count" : "6"
+      }, {
+        "item" : "2024-08-27T10:13:24.000",
+        "count" : "6"
+      } ],
+      "smallest" : "2021-10-01T07:03:49.000",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : { }
+  }, {
+    "id" : 597232570,
+    "name" : "Service Request Age Days",
+    "dataTypeName" : "number",
+    "description" : "The number of days of the service request age.",
+    "fieldName" : "sr_age_days",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147956150,
+    "cachedContents" : {
+      "non_null" : "376135",
+      "largest" : "21129",
+      "null" : "0",
+      "top" : [ {
+        "item" : "20729",
+        "count" : "1127"
+      }, {
+        "item" : "20728",
+        "count" : "912"
+      }, {
+        "item" : "20017",
+        "count" : "718"
+      }, {
+        "item" : "20405",
+        "count" : "712"
+      }, {
+        "item" : "757",
+        "count" : "706"
+      }, {
+        "item" : "20016",
+        "count" : "705"
+      }, {
+        "item" : "20108",
+        "count" : "655"
+      }, {
+        "item" : "20426",
+        "count" : "652"
+      }, {
+        "item" : "20023",
+        "count" : "650"
+      }, {
+        "item" : "20503",
+        "count" : "644"
+      }, {
+        "item" : "20011",
+        "count" : "637"
+      }, {
+        "item" : "20015",
+        "count" : "630"
+      }, {
+        "item" : "20727",
+        "count" : "617"
+      }, {
+        "item" : "20115",
+        "count" : "612"
+      }, {
+        "item" : "526",
+        "count" : "610"
+      }, {
+        "item" : "20419",
+        "count" : "607"
+      }, {
+        "item" : "20504",
+        "count" : "607"
+      }, {
+        "item" : "20427",
+        "count" : "604"
+      }, {
+        "item" : "20920",
+        "count" : "604"
+      }, {
+        "item" : "20100",
+        "count" : "602"
+      } ],
+      "smallest" : "0",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 597232571,
+    "name" : "Response Days",
+    "dataTypeName" : "number",
+    "description" : "The number of days it took to respond to service request.",
+    "fieldName" : "response_days",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147956154,
+    "cachedContents" : {
+      "non_null" : "376135",
+      "largest" : "694",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "196084"
+      }, {
+        "item" : "1",
+        "count" : "72047"
+      }, {
+        "item" : "2",
+        "count" : "21558"
+      }, {
+        "item" : "3",
+        "count" : "14540"
+      }, {
+        "item" : "4",
+        "count" : "9320"
+      }, {
+        "item" : "5",
+        "count" : "6230"
+      }, {
+        "item" : "6",
+        "count" : "4917"
+      }, {
+        "item" : "7",
+        "count" : "4071"
+      }, {
+        "item" : "8",
+        "count" : "2855"
+      }, {
+        "item" : "9",
+        "count" : "2181"
+      }, {
+        "item" : "10",
+        "count" : "1988"
+      }, {
+        "item" : "11",
+        "count" : "1876"
+      }, {
+        "item" : "13",
+        "count" : "1818"
+      }, {
+        "item" : "12",
+        "count" : "1803"
+      }, {
+        "item" : "14",
+        "count" : "1708"
+      }, {
+        "item" : "15",
+        "count" : "1427"
+      }, {
+        "item" : "16",
+        "count" : "1192"
+      }, {
+        "item" : "18",
+        "count" : "1042"
+      }, {
+        "item" : "21",
+        "count" : "1010"
+      }, {
+        "item" : "17",
+        "count" : "952"
+      } ],
+      "smallest" : "0",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 597232572,
+    "name" : "Is Open",
+    "dataTypeName" : "number",
+    "description" : "Boolean value on whether the service request is in the open status.",
+    "fieldName" : "open_count",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147956155,
+    "cachedContents" : {
+      "non_null" : "376135",
+      "largest" : "1",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "375363"
+      }, {
+        "item" : "1",
+        "count" : "772"
+      } ],
+      "smallest" : "0",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 597232573,
+    "name" : "Is Closed",
+    "dataTypeName" : "number",
+    "description" : "Boolean value on whether the service request is in the closed status.",
+    "fieldName" : "closed_count",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147956156,
+    "cachedContents" : {
+      "non_null" : "376135",
+      "largest" : "1",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "375338"
+      }, {
+        "item" : "0",
+        "count" : "797"
+      } ],
+      "smallest" : "0",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 597232574,
+    "name" : "Is Overdue",
+    "dataTypeName" : "number",
+    "description" : "Boolean value on whether the service request is overdue.",
+    "fieldName" : "overdue_count",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147956157,
+    "cachedContents" : {
+      "non_null" : "376135",
+      "largest" : "1",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "376110"
+      }, {
+        "item" : "1",
+        "count" : "25"
+      } ],
+      "smallest" : "0",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 597232575,
+    "name" : "Is Closed on Time",
+    "dataTypeName" : "number",
+    "description" : "Boolean value on whether the service request is closed on time.",
+    "fieldName" : "closed_on_time",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147956158,
+    "cachedContents" : {
+      "non_null" : "376135",
+      "largest" : "1",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "356563"
+      }, {
+        "item" : "0",
+        "count" : "19572"
+      } ],
+      "smallest" : "0",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 597232576,
+    "name" : "Is Closed Late",
+    "dataTypeName" : "number",
+    "description" : "Boolean value on whether the service request is closed late.",
+    "fieldName" : "closed_late",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147956159,
+    "cachedContents" : {
+      "non_null" : "376135",
+      "largest" : "1",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "357360"
+      }, {
+        "item" : "1",
+        "count" : "18775"
+      } ],
+      "smallest" : "0",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 597232577,
+    "name" : "Number of Days Late",
+    "dataTypeName" : "number",
+    "description" : "The number of days the service request is late by.",
+    "fieldName" : "of_days_late",
+    "position" : 20,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147956160,
+    "cachedContents" : {
+      "non_null" : "376135",
+      "largest" : "629",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "358893"
+      }, {
+        "item" : "1",
+        "count" : "2412"
+      }, {
+        "item" : "2",
+        "count" : "1465"
+      }, {
+        "item" : "3",
+        "count" : "1159"
+      }, {
+        "item" : "4",
+        "count" : "1024"
+      }, {
+        "item" : "6",
+        "count" : "901"
+      }, {
+        "item" : "5",
+        "count" : "853"
+      }, {
+        "item" : "7",
+        "count" : "783"
+      }, {
+        "item" : "8",
+        "count" : "497"
+      }, {
+        "item" : "13",
+        "count" : "338"
+      }, {
+        "item" : "12",
+        "count" : "334"
+      }, {
+        "item" : "14",
+        "count" : "331"
+      }, {
+        "item" : "9",
+        "count" : "331"
+      }, {
+        "item" : "11",
+        "count" : "327"
+      }, {
+        "item" : "10",
+        "count" : "319"
+      }, {
+        "item" : "15",
+        "count" : "254"
+      }, {
+        "item" : "20",
+        "count" : "199"
+      }, {
+        "item" : "21",
+        "count" : "184"
+      }, {
+        "item" : "19",
+        "count" : "179"
+      }, {
+        "item" : "18",
+        "count" : "162"
+      } ],
+      "smallest" : "0",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 597232578,
+    "name" : "Fiscal Year",
+    "dataTypeName" : "number",
+    "description" : "The fiscal year the service request was created.",
+    "fieldName" : "fiscal_year",
+    "position" : 21,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148689315,
+    "cachedContents" : {
+      "non_null" : "376135",
+      "largest" : "2027",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2023",
+        "count" : "79979"
+      }, {
+        "item" : "2026",
+        "count" : "79633"
+      }, {
+        "item" : "2024",
+        "count" : "74648"
+      }, {
+        "item" : "2025",
+        "count" : "71852"
+      }, {
+        "item" : "2022",
+        "count" : "61600"
+      }, {
+        "item" : "2027",
+        "count" : "8423"
+      } ],
+      "smallest" : "2022",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : { }
+  }, {
+    "id" : 597232579,
+    "name" : "Service Request Location",
+    "dataTypeName" : "text",
+    "description" : "The service request address location.",
+    "fieldName" : "sr_location",
+    "position" : 22,
+    "renderTypeName" : "text",
+    "tableColumnId" : 147956161,
+    "cachedContents" : {
+      "non_null" : "374788",
+      "largest" : "ZYLE RD & FM 1826 RD, AUSTIN, TX",
+      "null" : "1347",
+      "top" : [ {
+        "item" : "2100 BARTON SPRINGS RD, AUSTIN, TX 78746",
+        "count" : "594"
+      }, {
+        "item" : "1206 HARVEY ST, AUSTIN, TX 78702",
+        "count" : "372"
+      }, {
+        "item" : "1520 RUTHERFORD LN, AUSTIN, TX 78754",
+        "count" : "342"
+      }, {
+        "item" : "1813 E 6TH ST, AUSTIN, TX 78702",
+        "count" : "339"
+      }, {
+        "item" : "E SLAUGHTER LN & S IH 35 SVRD NB, AUSTIN, TX",
+        "count" : "325"
+      }, {
+        "item" : "113 E 5TH ST, AUSTIN, TX 78701",
+        "count" : "308"
+      }, {
+        "item" : "1208 HARVEY ST, AUSTIN, TX 78702",
+        "count" : "269"
+      }, {
+        "item" : "MENCHACA RD & W WILLIAM CANNON DR, AUSTIN, TX",
+        "count" : "268"
+      }, {
+        "item" : "311 ATTAYAC ST, AUSTIN, TX 78702",
+        "count" : "261"
+      }, {
+        "item" : "BRODIE LN & W SLAUGHTER LN, AUSTIN, TX",
+        "count" : "256"
+      }, {
+        "item" : "JESTER BLVD & FM 2222 RD, AUSTIN, TX",
+        "count" : "241"
+      }, {
+        "item" : "ANDERSON MILL RD & N FM 620 RD, AUSTIN, TX",
+        "count" : "237"
+      }, {
+        "item" : "309 ATTAYAC ST, AUSTIN, TX 78702",
+        "count" : "230"
+      }, {
+        "item" : "710 COLORADO ST, AUSTIN, TX 78701",
+        "count" : "227"
+      }, {
+        "item" : "1205 HARVEY ST, AUSTIN, TX 78702",
+        "count" : "226"
+      }, {
+        "item" : "BLUFF SPRINGS RD & E WILLIAM CANNON DR, AUSTIN, TX",
+        "count" : "225"
+      }, {
+        "item" : "64 SAN MARCOS ST, AUSTIN, TX 78702",
+        "count" : "224"
+      }, {
+        "item" : "7809 NORTHWEST DR, AUSTIN, TX 78757",
+        "count" : "224"
+      }, {
+        "item" : "BRODIE LN & W WILLIAM CANNON DR, AUSTIN, TX",
+        "count" : "223"
+      }, {
+        "item" : "2011 FORT VIEW RD, AUSTIN, TX 78704",
+        "count" : "219"
+      } ],
+      "smallest" : "0926, AUSTIN, TX",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : { }
+  }, {
+    "id" : 597232580,
+    "name" : "State Plane X Coordinate",
+    "dataTypeName" : "number",
+    "description" : "The state plane x-coordinate of the service request.",
+    "fieldName" : "state_plane_x_coordinate",
+    "position" : 23,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147956162,
+    "cachedContents" : {
+      "non_null" : "374788",
+      "largest" : "3219179.21772898",
+      "null" : "1347",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1031"
+      }, {
+        "item" : "3094619.36997154",
+        "count" : "475"
+      }, {
+        "item" : "3081231.51493723",
+        "count" : "416"
+      }, {
+        "item" : "3089544.12845674",
+        "count" : "401"
+      }, {
+        "item" : "3106596.63001956",
+        "count" : "374"
+      }, {
+        "item" : "3126272.25478507",
+        "count" : "372"
+      }, {
+        "item" : "3087120.86736727",
+        "count" : "349"
+      }, {
+        "item" : "3107055.56289311",
+        "count" : "343"
+      }, {
+        "item" : "3101841.75517726",
+        "count" : "342"
+      }, {
+        "item" : "3113767.02134318",
+        "count" : "336"
+      }, {
+        "item" : "3120644.6535246",
+        "count" : "334"
+      }, {
+        "item" : "3111177.75252109",
+        "count" : "323"
+      }, {
+        "item" : "3122473.50308201",
+        "count" : "317"
+      }, {
+        "item" : "3121915.67275258",
+        "count" : "308"
+      }, {
+        "item" : "3114445.26293363",
+        "count" : "301"
+      }, {
+        "item" : "3121270.83319673",
+        "count" : "301"
+      }, {
+        "item" : "3086581.5048971",
+        "count" : "298"
+      }, {
+        "item" : "3143018.22093976",
+        "count" : "296"
+      }, {
+        "item" : "3102589.34432211",
+        "count" : "283"
+      }, {
+        "item" : "3126260.75254798",
+        "count" : "268"
+      } ],
+      "smallest" : "0.0",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 597232581,
+    "name" : "State Plane Y Coordinate",
+    "dataTypeName" : "number",
+    "description" : "The state plane y-coordinate of the service request.",
+    "fieldName" : "state_plane_y_coordinate",
+    "position" : 24,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147956163,
+    "cachedContents" : {
+      "non_null" : "374788",
+      "largest" : "10184017.3190447",
+      "null" : "1347",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1031"
+      }, {
+        "item" : "10046598.1829117",
+        "count" : "475"
+      }, {
+        "item" : "10039252.8729697",
+        "count" : "416"
+      }, {
+        "item" : "10035866.123675",
+        "count" : "401"
+      }, {
+        "item" : "10069858.2801197",
+        "count" : "374"
+      }, {
+        "item" : "10074191.0000677",
+        "count" : "372"
+      }, {
+        "item" : "10050380.4868931",
+        "count" : "349"
+      }, {
+        "item" : "10041892.6733526",
+        "count" : "343"
+      }, {
+        "item" : "10033710.0011066",
+        "count" : "342"
+      }, {
+        "item" : "10038584.4905369",
+        "count" : "336"
+      }, {
+        "item" : "10068585.7780475",
+        "count" : "334"
+      }, {
+        "item" : "10060018.9969327",
+        "count" : "323"
+      }, {
+        "item" : "10083879.9968138",
+        "count" : "317"
+      }, {
+        "item" : "10094902.2481648",
+        "count" : "308"
+      }, {
+        "item" : "10070285.9647395",
+        "count" : "301"
+      }, {
+        "item" : "10096222.5855885",
+        "count" : "301"
+      }, {
+        "item" : "10138284.9984911",
+        "count" : "298"
+      }, {
+        "item" : "10114702.4791449",
+        "count" : "296"
+      }, {
+        "item" : "10048802.5623919",
+        "count" : "283"
+      }, {
+        "item" : "10074248.9969721",
+        "count" : "268"
+      } ],
+      "smallest" : "0.0",
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 597232582,
+    "name" : "Location",
+    "dataTypeName" : "point",
+    "description" : "The service request point location.",
+    "fieldName" : "location",
+    "position" : 25,
+    "renderTypeName" : "point",
+    "tableColumnId" : 147957272,
+    "cachedContents" : {
+      "non_null" : "374788",
+      "null" : "1347",
+      "top" : [ {
+        "item" : {
+          "coordinates" : [ -105.98320392278413, 3.442337223643448 ],
+          "type" : "Point"
+        },
+        "count" : "1031"
+      }, {
+        "item" : {
+          "coordinates" : [ -97.80690621579792, 30.20291250029918 ],
+          "type" : "Point"
+        },
+        "count" : "475"
+      }, {
+        "item" : {
+          "coordinates" : [ -97.84979443152983, 30.183549964101783 ],
+          "type" : "Point"
+        },
+        "count" : "416"
+      }, {
+        "item" : {
+          "coordinates" : [ -97.82373433357257, 30.173727271442072 ],
+          "type" : "Point"
+        },
+        "count" : "401"
+      }, {
+        "item" : {
+          "coordinates" : [ -97.76730357604013, 30.266097719586668 ],
+          "type" : "Point"
+        },
+        "count" : "374"
+      }, {
+        "item" : {
+          "coordinates" : [ -97.70467208454836, 30.276744650290624 ],
+          "type" : "Point"
+        },
+        "count" : "372"
+      }, {
+        "item" : {
+          "coordinates" : [ -97.83036759592919, 30.213775643645608 ],
+          "type" : "Point"
+        },
+        "count" : "349"
+      }, {
+        "item" : {
+          "coordinates" : [ -97.7678929838211, 30.189195189426115 ],
+          "type" : "Point"
+        },
+        "count" : "343"
+      }, {
+        "item" : {
+          "coordinates" : [ -97.78498404220717, 30.167031737167473 ],
+          "type" : "Point"
+        },
+        "count" : "342"
+      }, {
+        "item" : {
+          "coordinates" : [ -97.74689982163054, 30.1796742430031 ],
+          "type" : "Point"
+        },
+        "count" : "336"
+      }, {
+        "item" : {
+          "coordinates" : [ -97.72291181519854, 30.26170117048071 ],
+          "type" : "Point"
+        },
+        "count" : "334"
+      }, {
+        "item" : {
+          "coordinates" : [ -97.75351902499926, 30.23875961836201 ],
+          "type" : "Point"
+        },
+        "count" : "323"
+      }, {
+        "item" : {
+          "coordinates" : [ -97.71598089773208, 30.30362437429387 ],
+          "type" : "Point"
+        },
+        "count" : "317"
+      }, {
+        "item" : {
+          "coordinates" : [ -97.71692665376122, 30.333958897951987 ],
+          "type" : "Point"
+        },
+        "count" : "308"
+      }, {
+        "item" : {
+          "coordinates" : [ -97.71887176746763, 30.33762998641813 ],
+          "type" : "Point"
+        },
+        "count" : "301"
+      }, {
+        "item" : {
+          "coordinates" : [ -97.74241739936514, 30.266773189852607 ],
+          "type" : "Point"
+        },
+        "count" : "301"
+      }, {
+        "item" : {
+          "coordinates" : [ -97.8258020785069, 30.455450395302222 ],
+          "type" : "Point"
+        },
+        "count" : "298"
+      }, {
+        "item" : {
+          "coordinates" : [ -97.64853994220341, 30.387003922306324 ],
+          "type" : "Point"
+        },
+        "count" : "296"
+      }, {
+        "item" : {
+          "coordinates" : [ -97.78152357311892, 30.20847189143983 ],
+          "type" : "Point"
+        },
+        "count" : "283"
+      }, {
+        "item" : {
+          "coordinates" : [ -97.70470417176665, 30.276904821185063 ],
+          "type" : "Point"
+        },
+        "count" : "268"
+      } ],
+      "count" : "376135",
+      "cardinality" : "376135"
+    },
+    "format" : { }
+  }, {
+    "id" : 597232583,
+    "name" : "Boundaries: Zip Code Tabulation Areas, 2017",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'Boundaries: Zip Code Tabulation Areas, 2017' (u569-ruue) the point in column 'location' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_u569_ruue",
+    "position" : 26,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147957274,
+    "computationStrategy" : {
+      "source_columns" : [ "location" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_u569-ruue",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 597232584,
+    "name" : "Boundaries: City of Austin Council Districts",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'Boundaries: City of Austin Council Districts' (ap3j-c5bq) the point in column 'location' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_ap3j_c5bq",
+    "position" : 27,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147957275,
+    "computationStrategy" : {
+      "source_columns" : [ "location" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_ap3j-c5bq",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 597232585,
+    "name" : "Cartographic Boundary File - Census Tracts",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'Cartographic Boundary File - Census Tracts' (99rk-ypn4) the point in column 'location' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_99rk_ypn4",
+    "position" : 28,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147957276,
+    "computationStrategy" : {
+      "source_columns" : [ "location" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_99rk-ypn4",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 597232586,
+    "name" : "Cartographic Boundary File - County",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'Cartographic Boundary File - County' (g44y-bfnm) the point in column 'location' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_g44y_bfnm",
+    "position" : 29,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147957277,
+    "computationStrategy" : {
+      "source_columns" : [ "location" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_g44y-bfnm",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 597232587,
+    "name" : "Boundaries: Zip Code Tabulation Areas, 2017 2",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'Boundaries: Zip Code Tabulation Areas, 2017' (jcrc-4uuy) the point in column 'location' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_jcrc_4uuy",
+    "position" : 30,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147957278,
+    "computationStrategy" : {
+      "source_columns" : [ "location" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_jcrc-4uuy",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 597232588,
+    "name" : "BOUNDARIES_single_member_districts",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'BOUNDARIES_single_member_districts' (q9nd-rr82) the point in column 'location' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_q9nd_rr82",
+    "position" : 31,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147957279,
+    "computationStrategy" : {
+      "source_columns" : [ "location" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_q9nd-rr82",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 597232589,
+    "name" : "Neighborhood Planning Areas",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'Neighborhood Planning Areas' (e9j2-6w3z) the point in column 'location' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_e9j2_6w3z",
+    "position" : 32,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147957280,
+    "computationStrategy" : {
+      "source_columns" : [ "location" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_e9j2-6w3z",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 597232590,
+    "name" : "Community Registry",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'Community Registry' (m2th-e4b7) the point in column 'location' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_m2th_e4b7",
+    "position" : 33,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147957281,
+    "computationStrategy" : {
+      "source_columns" : [ "location" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_m2th-e4b7",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 597232591,
+    "name" : "Zipcodes",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'Zipcodes' (rxpj-nzrk) the point in column 'location' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_rxpj_nzrk",
+    "position" : 34,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147957282,
+    "computationStrategy" : {
+      "source_columns" : [ "location" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_rxpj-nzrk",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 597232592,
+    "name" : "Boundaries: Austin MSA Census Tracts 2010",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'Boundaries: Austin MSA Census Tracts 2010' (pgdr-vyqg) the point in column 'location' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_pgdr_vyqg",
+    "position" : 35,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147957273,
+    "computationStrategy" : {
+      "source_columns" : [ "location" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_pgdr-vyqg",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 597232593,
+    "name" : "Council Districts Fill - TESTING DO NOT USE (Adrianne)",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'Council Districts Fill - TESTING DO NOT USE (Adrianne)' (6gig-z43c) the point in column 'location' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_6gig_z43c",
+    "position" : 36,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152966203,
+    "computationStrategy" : {
+      "source_columns" : [ "location" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_6gig-z43c",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 597232594,
+    "name" : "Equity Analysis Zones 2021",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'Equity Analysis Zones 2021' (9f4k-urcf) the point in column 'location' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_9f4k_urcf",
+    "position" : 37,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152966779,
+    "computationStrategy" : {
+      "source_columns" : [ "location" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_9f4k-urcf",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 597232620,
+    "name" : "Austin Police Sectors",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'Austin Police Sectors' (hnvk-vq9u) the point in column 'location' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_hnvk_vq9u",
+    "position" : 38,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154038191,
+    "computationStrategy" : {
+      "source_columns" : [ "location" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_hnvk-vq9u",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Ownership" : {
+        "Program Name" : "Data and Technology Services Division",
+        "Department name" : "Austin Transportation and Public Works"
+      },
+      "Publishing Information" : {
+        "Update Frequency" : "Daily",
+        "Spatial Information" : "State Plane X and Y coordinate for location of 311 service requests",
+        "Time range of data" : "10/01/2021 to present"
+      },
+      "Citywide Strategic Plan" : {
+        "Strategic Priority" : "Mobility & Critical Infrastructure"
+      }
+    },
+    "rowIdentifier" : 597232558,
+    "rowLabel" : "311 Service Request assigned to Austin Transportation and Public Works",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "8t3r-wq64",
+    "disabledAt" : 1674498345,
+    "displayName" : "transportation.data@austintexas.gov",
+    "profileImageUrlLarge" : "/api/users/8t3r-wq64/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/8t3r-wq64/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/8t3r-wq64/profile_images/TINY",
+    "screenName" : "transportation.data@austintexas.gov",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "8t3r-wq64",
+    "disabledAt" : 1674498345,
+    "displayName" : "transportation.data@austintexas.gov",
+    "profileImageUrlLarge" : "/api/users/8t3r-wq64/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/8t3r-wq64/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/8t3r-wq64/profile_images/TINY",
+    "screenName" : "transportation.data@austintexas.gov",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "tpw", "transportation and public works", "mobility", "311", "service requests", "csrs", "csr", "transportation", "public works", "sr", "311 sr", "atpw" ],
+  "flags" : [ "default", "federated", "internalToPublicFederatedView", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

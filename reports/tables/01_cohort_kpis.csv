@@ -1,0 +1,2 @@
+primary_requests,closed_requests,open_backlog,snapshot_closure_share,duration_eligible_closed,mean_closure_days,deadline_eligible_closed,closed_by_recorded_deadline_share,open_past_recorded_deadline
+69149,69131,18,0.9997396925479761,69127,4.404571187144006,69127,0.9709664819824381,18

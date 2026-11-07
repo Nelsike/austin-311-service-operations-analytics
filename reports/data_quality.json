@@ -1,0 +1,75 @@
+{
+  "source_rows": 376135,
+  "outside_2025": 302445,
+  "cohort_rows": 73690,
+  "created_date_range_local": [
+    "2025-01-01 00:49:37",
+    "2025-12-31 23:21:48"
+  ],
+  "all_source_created_range_local": [
+    "2021-10-01 00:39:52",
+    "2026-11-06 07:57:11"
+  ],
+  "duplicate_request_ids": 0,
+  "exact_duplicate_rows": 0,
+  "business_duplicate_requests": 4540,
+  "test_requests": 1,
+  "primary_requests": 69149,
+  "status_flag_conflicts": 2,
+  "deadline_flag_conflicts": 0,
+  "open_overdue_flag_conflicts": 17,
+  "source_open_age_conflicts_over_one_day": 19,
+  "negative_closure_intervals": 0,
+  "deadline_before_creation": 0,
+  "invalid_date_values": {
+    "created_date": 0,
+    "close_date": 0,
+    "overdue_on_date": 0,
+    "last_update_date": 0,
+    "status_change_date": 0
+  },
+  "ambiguous_or_nonexistent_timestamps": {
+    "created_date": 4,
+    "close_date": 0,
+    "overdue_on_date": 0,
+    "last_update_date": 0,
+    "status_change_date": 0
+  },
+  "timestamp_affected_requests": 4,
+  "primary_closed_excluded_from_duration": 4,
+  "trimmed_cells": {
+    "Service Request Number": 0,
+    "Department": 0,
+    "Group Description": 0,
+    "Service Request Description": 952,
+    "Method Received": 0,
+    "Service Request Status": 0,
+    "Is Duplicate": 0,
+    "Status Change Date": 0,
+    "Created Date": 0,
+    "Overdue On Date": 0,
+    "Last Update Date": 0,
+    "Close Date": 0,
+    "Service Request Age Days": 0,
+    "Response Days": 0,
+    "Is Open": 0,
+    "Is Closed": 0,
+    "Is Overdue": 0,
+    "Is Closed on Time": 0,
+    "Is Closed Late": 0,
+    "Number of Days Late": 0,
+    "Fiscal Year": 0,
+    "Service Request Location": 385,
+    "State Plane X Coordinate": 0,
+    "State Plane Y Coordinate": 0,
+    "Location": 0
+  },
+  "status_counts": {
+    "Closed": 69131,
+    "Duplicate (closed)": 4539,
+    "Open": 18,
+    "Duplicate (open)": 1,
+    "CancelledTesting": 1
+  },
+  "no_verified_resolution_field": true
+}

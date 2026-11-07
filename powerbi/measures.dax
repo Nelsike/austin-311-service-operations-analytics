@@ -1,0 +1,75 @@
+// Create each measure separately in Power BI Desktop. Count/flag columns are whole numbers.
+// All primary measures retain current service, organization, channel and CREATION-date filters.
+
+Primary Requests =
+CALCULATE(COUNTROWS(fact_requests), KEEPFILTERS(fact_requests[in_primary] = 1))
+
+Reported Closed Requests =
+CALCULATE([Primary Requests], KEEPFILTERS(fact_requests[is_closed] = 1))
+
+Reported Open Backlog =
+CALCULATE([Primary Requests], KEEPFILTERS(fact_requests[is_open] = 1))
+
+Snapshot Closure Share =
+DIVIDE([Reported Closed Requests], [Primary Requests])
+
+Duration Eligible Closed =
+CALCULATE([Primary Requests], KEEPFILTERS(fact_requests[valid_closure] = 1))
+
+Median Closure Days =
+MEDIANX(
+    FILTER(fact_requests, fact_requests[in_primary] = 1 && fact_requests[valid_closure] = 1),
+    fact_requests[closure_days]
+)
+
+Median Closure Hours = [Median Closure Days] * 24
+
+P90 Closure Days =
+PERCENTILEX.INC(
+    FILTER(fact_requests, fact_requests[in_primary] = 1 && fact_requests[valid_closure] = 1),
+    fact_requests[closure_days], 0.90
+)
+
+Deadline Eligible Closed =
+CALCULATE([Primary Requests], KEEPFILTERS(fact_requests[valid_deadline_closure] = 1))
+
+Closed By Recorded Deadline =
+CALCULATE([Primary Requests], KEEPFILTERS(fact_requests[valid_deadline_closure] = 1),
+    KEEPFILTERS(fact_requests[closed_by_deadline] = 1))
+
+Closed By Recorded Deadline Share =
+DIVIDE([Closed By Recorded Deadline], [Deadline Eligible Closed])
+
+Reported Open Past Deadline =
+CALCULATE([Reported Open Backlog], KEEPFILTERS(fact_requests[open_past_deadline] = 1))
+
+Median Open Age Days =
+MEDIANX(
+    FILTER(fact_requests, fact_requests[in_primary] = 1 && fact_requests[is_open] = 1 && NOT ISBLANK(fact_requests[open_age_days])),
+    fact_requests[open_age_days]
+)
+
+Flag Conflicts In Primary =
+CALCULATE([Primary Requests], KEEPFILTERS(fact_requests[status_flag_conflict] = 1))
+
+All Nontest Intake =
+CALCULATE(COUNTROWS(fact_requests), KEEPFILTERS(fact_requests[is_test] = 0))
+
+Duplicate Marked Intake =
+CALCULATE([All Nontest Intake], KEEPFILTERS(fact_requests[is_business_duplicate] = 1))
+
+Duplicate Marked Share =
+DIVIDE([Duplicate Marked Intake], [All Nontest Intake])
+
+// Only use on a chart explicitly labelled "Closure month, 2025-created cohort".
+// USERELATIONSHIP switches date filtering to the closure-date relationship.
+Cohort Closures By Closure Month =
+CALCULATE([Reported Closed Requests],
+    USERELATIONSHIP(dim_date[date_key], fact_requests[closed_date_key]))
+
+Snapshot Date = MAX(snapshot[snapshot_date])
+
+Scope Label = "Requests created in 2025 | statuses observed in Nov 7, 2026 export"
+
+// Do not add a Verified Resolutions or First Response Time numeric measure:
+// the required events/evidence are absent from this dataset.

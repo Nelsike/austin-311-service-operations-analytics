@@ -1,0 +1,44 @@
+service_description,total_intake,duplicate_marked,duplicate_marked_share
+TPW - Traffic Signal - Maintenance,11738,3263,0.27798602828420516
+TPW - Parking Sign Maintenance,2415,273,0.11304347826086956
+TPW - Parking Machine Issue,1533,217,0.1415525114155251
+TPW - Tree Issue Right of Way,3707,171,0.04612894523873752
+TPW - Debris in Street,3138,120,0.03824091778202677
+TPW - Pothole Repair,3027,91,0.03006276841757516
+TPW - Road Markings/Striping - Maintenance,1096,78,0.07116788321167883
+TPW - Traffic Sign Maintenance,2403,68,0.028297960882230546
+TPW - Sidewalk Repair,1512,59,0.03902116402116402
+TPW - Pavement Failure,1248,42,0.03365384615384615
+TPW - Street Resurfacing,750,35,0.04666666666666667
+TPW - Traffic Signal - Modification,933,30,0.03215434083601286
+TPW - Street Name Sign Maintenance,764,22,0.028795811518324606
+TPW - Alley & Unpaved Street Maintenance,411,19,0.046228710462287104
+TPW - New Sidewalk/Curb Ramp/ADA Route,287,13,0.04529616724738676
+TPW - Curb/Gutter Repair,372,12,0.03225806451612903
+TPW - Traffic Signal - New,405,11,0.027160493827160494
+TPW - Bridge Repair,88,4,0.045454545454545456
+TPW - Guardrail New/Repair,162,4,0.024691358024691357
+TPW - Roadway Spillage,98,4,0.04081632653061224
+TPW - School Zone Sign Maintenance,91,3,0.03296703296703297
+TPW - School Zone Beacon - Maintenance,119,1,0.008403361344537815
+TPW - Activate/Deactivate Work Zone,502,0,0.0
+TPW - Bicycle Issues,419,0,0.0
+TPW - Booting Complaint,210,0,0.0
+TPW - Construction Concerns in Right of Way,2309,0,0.0
+TPW - Dig Tess Request,1981,0,0.0
+TPW - Lane/Road Closure Notification,2250,0,0.0
+TPW - Mowing Medians,440,0,0.0
+TPW - Obstruction in Right of Way,2431,0,0.0
+TPW - Parking Violation Enforcement,19117,0,0.0
+TPW - Pay-by-Phone App,118,0,0.0
+TPW - Pedestrian Crossing New/Modify,242,0,0.0
+TPW - Road Markings/Striping - New,479,0,0.0
+TPW - School Issues - Crossing Guards,57,0,0.0
+TPW - Shared Micromobility,1581,0,0.0
+TPW - Special Event,321,0,0.0
+TPW - Speed Management,1148,0,0.0
+TPW - Street and Bridge Miscellaneous,728,0,0.0
+TPW - Traffic Sign Emergency,952,0,0.0
+TPW - Traffic Sign New,1266,0,0.0
+TPW - Utility Cut Repair,353,0,0.0
+TPW - View Obstruction and Fencing at Intersection,488,0,0.0

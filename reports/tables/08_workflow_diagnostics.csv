@@ -1,0 +1,44 @@
+service_description,requests,duration_n,zero_elapsed_closures,closures_in_2026,min_recorded_deadline_calendar_days,max_recorded_deadline_calendar_days
+TPW - Lane/Road Closure Notification,2250,2250,2250,0,1.0,7.0
+TPW - Activate/Deactivate Work Zone,502,502,501,0,1.0,5.0
+TPW - Alley & Unpaved Street Maintenance,392,391,0,0,7.0,131.0
+TPW - Bicycle Issues,419,419,0,10,30.0,51.0
+TPW - Booting Complaint,210,210,0,4,2.0,10.0
+TPW - Bridge Repair,84,83,0,0,9.0,131.0
+TPW - Construction Concerns in Right of Way,2309,2309,0,1,9.0,16.0
+TPW - Curb/Gutter Repair,360,360,0,0,2.0,131.0
+TPW - Debris in Street,3018,3017,0,3,2.0,46.0
+TPW - Dig Tess Request,1981,1981,0,0,2.0,22.0
+TPW - Guardrail New/Repair,158,158,0,4,254.0,265.0
+TPW - Mowing Medians,440,439,0,1,15.0,27.0
+TPW - New Sidewalk/Curb Ramp/ADA Route,274,274,0,14,70.0,131.0
+TPW - Obstruction in Right of Way,2431,2430,0,27,84.0,179.0
+TPW - Parking Machine Issue,1316,1316,0,11,9.0,14.0
+TPW - Parking Sign Maintenance,2142,2141,0,7,28.0,34.0
+TPW - Parking Violation Enforcement,19117,19115,0,7,2.0,12.0
+TPW - Pavement Failure,1206,1206,0,9,20.0,34.0
+TPW - Pay-by-Phone App,118,118,0,0,7.0,11.0
+TPW - Pedestrian Crossing New/Modify,242,242,0,23,99.0,107.0
+TPW - Pothole Repair,2936,2935,0,6,2.0,12.0
+TPW - Road Markings/Striping - Maintenance,1018,1017,0,156,84.0,93.0
+TPW - Road Markings/Striping - New,479,479,0,31,50.0,79.0
+TPW - Roadway Spillage,94,92,0,0,2.0,4.0
+TPW - School Issues - Crossing Guards,57,57,0,6,42.0,48.0
+TPW - School Zone Beacon - Maintenance,118,117,0,1,21.0,33.0
+TPW - School Zone Sign Maintenance,88,87,0,2,28.0,34.0
+TPW - Shared Micromobility,1581,1580,0,9,3.0,9.0
+TPW - Sidewalk Repair,1453,1451,0,2,2.0,46.0
+TPW - Special Event,321,321,0,0,5.0,12.0
+TPW - Speed Management,1148,1148,0,69,99.0,107.0
+TPW - Street Name Sign Maintenance,742,741,0,5,28.0,62.0
+TPW - Street Resurfacing,715,714,0,6,28.0,34.0
+TPW - Street and Bridge Miscellaneous,728,727,0,3,42.0,51.0
+TPW - Traffic Sign Emergency,952,952,0,0,1.0,28.0
+TPW - Traffic Sign Maintenance,2335,2335,0,12,1.0,34.0
+TPW - Traffic Sign New,1266,1265,0,115,50.0,79.0
+TPW - Traffic Signal - Maintenance,8475,8474,0,18,42.0,51.0
+TPW - Traffic Signal - Modification,903,903,0,9,63.0,72.0
+TPW - Traffic Signal - New,394,394,0,14,63.0,72.0
+TPW - Tree Issue Right of Way,3536,3536,0,17,15.0,27.0
+TPW - Utility Cut Repair,353,353,0,1,9.0,131.0
+TPW - View Obstruction and Fencing at Intersection,488,488,0,9,18.0,27.0

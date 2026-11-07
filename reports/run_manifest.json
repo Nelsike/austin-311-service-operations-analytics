@@ -1,0 +1,26 @@
+{
+  "dataset_id": "38mr-dwji",
+  "source_url": "https://data.austintexas.gov/d/38mr-dwji",
+  "source_filename": "source_snapshot.csv",
+  "source_bytes": 162854138,
+  "source_sha256": "d44249d91cca0da43444339678a8cc32b40191de3e9ae325bad692bc29c3c70a",
+  "metadata_sha256": "97dd8a035b0e3910a51c92e99e85fce50db8288de197c01d27b137994bf0b8da",
+  "source_rows": 376135,
+  "cohort_rows": 73690,
+  "age_cutoff_local": "2026-11-07T00:00:00-06:00",
+  "official_metadata_rows_updated_at_utc": "2026-11-07T08:43:04+00:00",
+  "snapshot_note": "Age cutoff is fixed midnight CT. Status is observed in the input export, not reconstructed history. The file observation timestamp is not independently verified.",
+  "versions": {
+    "python": "3.12.14",
+    "pandas": "3.0.1",
+    "numpy": "2.3.5",
+    "sqlite": "3.53.1"
+  },
+  "validation": {
+    "sql_python_percentiles_match": true,
+    "monthly_intake_reconciles": true,
+    "primary_status_partition_reconciles": true,
+    "closure_month_reconciles": true,
+    "sqlite_integrity_and_foreign_keys_pass": true
+  }
+}

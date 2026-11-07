@@ -1,0 +1,28 @@
+{
+  "original_download_hash_matches": true,
+  "independent_csv_counts": {
+    "source": 376135,
+    "cohort": 73690,
+    "duplicate": 4540,
+    "test": 1,
+    "primary": 69149,
+    "primary_closed": 69131,
+    "primary_open": 18
+  },
+  "database_counts_reconcile": true,
+  "database_integrity": "ok",
+  "foreign_key_errors": 0,
+  "powerbi_fact_rows": 73690,
+  "tables": [
+    "dim_channel",
+    "dim_date",
+    "dim_organization",
+    "dim_service",
+    "fact_requests",
+    "raw_requests_2025",
+    "snapshot"
+  ],
+  "preview_visually_reviewed": true,
+  "powerbi_desktop_validated": false,
+  "synthetic_tests": "8 passed; see test_results.txt"
+}

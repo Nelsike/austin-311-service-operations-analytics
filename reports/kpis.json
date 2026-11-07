@@ -1,0 +1,17 @@
+{
+  "primary_requests": 69149,
+  "closed_requests": 69131,
+  "open_backlog": 18,
+  "snapshot_closure_share": 0.9997396925479761,
+  "duration_eligible_closed": 69127.0,
+  "mean_closure_days": 4.404571187144006,
+  "deadline_eligible_closed": 69127.0,
+  "closed_by_recorded_deadline_share": 0.9709664819824381,
+  "open_past_recorded_deadline": 18.0,
+  "median_closure_days": 0.19408564814814816,
+  "p90_closure_days": 9.026949074074077,
+  "cohort_rows": 73690,
+  "business_duplicates": 4540,
+  "test_records": 1,
+  "age_cutoff_local": "2026-11-07T00:00:00-06:00"
+}

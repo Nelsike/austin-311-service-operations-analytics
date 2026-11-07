@@ -1,0 +1,13 @@
+test_business_duplicate_and_testing_are_preserved_but_not_primary (test_pipeline.PipelineBoundaries.test_business_duplicate_and_testing_are_preserved_but_not_primary) ... ok
+test_calendar_year_boundaries_not_fiscal_year (test_pipeline.PipelineBoundaries.test_calendar_year_boundaries_not_fiscal_year) ... ok
+test_closed_without_date_counts_as_closed_but_not_timed (test_pipeline.PipelineBoundaries.test_closed_without_date_counts_as_closed_but_not_timed) ... ok
+test_duplicate_ids_fail_instead_of_arbitrary_deduplication (test_pipeline.PipelineBoundaries.test_duplicate_ids_fail_instead_of_arbitrary_deduplication) ... ok
+test_fall_ambiguous_hour_preserves_volume_excludes_duration (test_pipeline.PipelineBoundaries.test_fall_ambiguous_hour_preserves_volume_excludes_duration) ... ok
+test_negative_duration_is_not_zero (test_pipeline.PipelineBoundaries.test_negative_duration_is_not_zero) ... ok
+test_open_status_beats_inconsistent_source_open_flag (test_pipeline.PipelineBoundaries.test_open_status_beats_inconsistent_source_open_flag) ... ok
+test_spring_dst_is_23_elapsed_hours (test_pipeline.PipelineBoundaries.test_spring_dst_is_23_elapsed_hours) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.842s
+
+OK
