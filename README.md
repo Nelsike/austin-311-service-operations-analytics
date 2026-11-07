@@ -2,7 +2,7 @@
 
 **Python · SQL · Power BI model design · Public-service operations**
 
-**v1.0 — Desktop-validated portfolio version.** Python, SQL and the three-page Power BI report are validated. The repository remains private pending the public-release review.
+**v1.0 — Desktop-validated portfolio version.** Python, SQL and the three-page Power BI report are validated. Published as a public portfolio project on November 7, 2026.
 
 An analysis of 2025-created Transportation and Public Works service requests: reported demand, administrative closure intervals, recorded deadlines and the reported open backlog visible in a November 7, 2026 export.
 
@@ -95,7 +95,7 @@ Recommended follow-up: verify the small reported backlog in the live system; rev
 
 The build checks IDs, schema, binary flags, timestamps, foreign keys and SQLite integrity. Independently written SQL/Python median and P90 calculations reconcile, as do intake and dated closure-month totals. Eight synthetic tests pass for the v1 build. See [run evidence](reports/run_manifest.json) and [Desktop validation status](docs/desktop_validation.md).
 
-The private repository stores source code, SQL, documentation, aggregate reports, theme and preview. Raw exports, generated row-level tables, request-level exception/backlog CSVs, the database and `.pbix` files are excluded by `.gitignore`. The full source is approximately 163 MB and exceeds GitHub's ordinary single-file limit. For exact public reproduction, arrange a versioned data-release asset and verify redistribution terms first. A fresh live download is analytically reproducible but may not reproduce the frozen snapshot's numbers. Public release remains pending the final presentation and repository-visibility review.
+The public repository stores source code, SQL, documentation, aggregate reports, theme and preview. Raw exports, generated row-level tables, request-level exception/backlog CSVs, the database and `.pbix` files are excluded by `.gitignore`. The full source is approximately 163 MB and exceeds GitHub's ordinary single-file limit. For exact public reproduction, arrange a versioned data-release asset and verify redistribution terms first. A fresh live download is analytically reproducible but may not reproduce the frozen snapshot's numbers. The reviewed repository and aggregate report artifacts are public. The project is also listed in the Projects and Featured sections of the author's LinkedIn profile.
 
 ## Sources and attribution
 

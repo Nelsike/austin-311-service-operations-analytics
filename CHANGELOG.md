@@ -6,7 +6,8 @@
 - Reconcile actual DAX results to the Python/SQL evidence, including all 43 service percentiles and the closure-date role.
 - Test month/service interactions, filter clearing and the empty-backlog state in Desktop.
 - Save/reopen the report and export its actual pages to a visually reviewed PDF and PNGs.
-- Prepare the LinkedIn project entry; public repository visibility and profile attachment remain pending review.
+- Publish the reviewed GitHub repository and attach the project to LinkedIn Projects with five skills, the repository link and actual dashboard thumbnail.
+- Feature the saved project on the author's LinkedIn profile.
 
 ## v0.1 — November 7, 2026
 
@@ -20,4 +21,4 @@ Initial private working version of Austin 311 Service Operations Analytics.
 - Generate aggregate results, operational recommendations and a static analytical preview.
 - Validate database integrity, cross-language percentile calculations, count reconciliation and eight synthetic boundary tests.
 
-Remaining before public portfolio release: Power BI Desktop implementation, application-specific validation, a real dashboard screenshot and final presentation review. The static preview is not a Power BI screenshot, and closed requests are not verified resolutions.
+At the v0.1 milestone, Power BI Desktop implementation, application-specific validation, a real dashboard screenshot and final presentation review remained open. These were completed for v1.0. The original static preview is not a Power BI screenshot, and closed requests are not verified resolutions.

@@ -5,7 +5,10 @@
   "desktop_version": "2.159.1231.0 (October 2026)",
   "validation_date": "2026-11-07",
   "native_report_pages": 3,
-  "public_release": false,
-  "linkedin_attached": false,
+  "public_release": true,
+  "linkedin_attached": true,
+  "publication_date": "2026-11-07",
+  "linkedin_featured": true,
+  "repository_url": "https://github.com/Nelsike/austin-311-service-operations-analytics",
   "note": "Desktop model, filters, save/reopen and native PDF export verified. Static exports show the table viewport; the interactive report supports scrolling through all rows."
 }

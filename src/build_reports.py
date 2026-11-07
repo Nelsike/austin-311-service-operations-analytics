@@ -249,6 +249,12 @@ The public metadata does not provide a named license identifier in the captured 
         new='The native [Power BI project](powerbi/desktop/A311.pbip) contains three interactive pages: operations overview, service comparisons, and reported backlog/quality. It was opened, refreshed, saved and reopened in Power BI Desktop 2.159.1231.0. Seven read-only DAX query checks reconcile the headline metrics, all 43 service percentiles, service/month filter contexts, date roles and relationship integrity to Python/SQL. Month and service selections, filter clearing and an empty backlog were also checked in the actual report. See [validation evidence](docs/desktop_validation.md) and the [native PDF export](reports/Austin-311-Service-Operations-Dashboard.pdf).\n\nTo open it locally, run the cleaning pipeline, then `python src/build_powerbi_project.py` and open `powerbi/desktop/A311.pbip` in Desktop. Refresh the model. The builder sets the local `pProjectFolder` parameter; the repository copy uses a generic path that must be configured on another computer. Local caches and bulk request data are excluded from Git. The PDF and PNGs show the visible table viewport; use the interactive report to scroll through all rows.'
         readme=readme.replace(old,new)
         readme=readme.replace('Public release remains pending the Power BI and final presentation review.', 'Public release remains pending the final presentation and repository-visibility review.')
+        if status.get('public_release',False):
+            readme=readme.replace('The repository remains private pending the public-release review.', 'Published as a public portfolio project on November 7, 2026.')
+            readme=readme.replace('The private repository stores', 'The public repository stores')
+            readme=readme.replace('Public release remains pending the final presentation and repository-visibility review.', 'The reviewed repository and aggregate report artifacts are public.')
+            if status.get('linkedin_attached',False):
+                readme=readme.replace('The reviewed repository and aggregate report artifacts are public.', 'The reviewed repository and aggregate report artifacts are public. The project is also listed in the Projects and Featured sections of the author\'s LinkedIn profile.')
     write(root/'README.md',readme)
 
     targets = [
